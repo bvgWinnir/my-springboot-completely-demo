@@ -1,0 +1,5 @@
+springboot-args-webflux:        9999
+springboot-jpa:                 10000
+springboot-mybatis-plus:        7000
+springboot-mybatis-xml-annotion:10010
+springboot-redis:               10001
