@@ -9,7 +9,7 @@ public class InterceptorConfig extends WebMvcConfigurerAdapter {
  
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LogCostInterceptor()).addPathPatterns("/**").excludePathPatterns("/login","session/login");
+        registry.addInterceptor(new LogCostInterceptor()).addPathPatterns("/login").excludePathPatterns("/login","session/login","/postMap");
         super.addInterceptors(registry);
     }
 }
