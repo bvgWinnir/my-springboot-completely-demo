@@ -26,6 +26,7 @@ class SpringbootRedisApplicationTests {
 
 //    @Autowired
 //    private StringRedisTemplate stringRedisTemplate;
+    //没有注入
 
 
 

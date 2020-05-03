@@ -1,7 +1,7 @@
 version: '3'
 services:
   mysql-db:
-    container_name: mysql-docker        # 指定容器的名称
+    container_name: mysql-docker-local        # 指定容器的名称
     image: mysql:5.7                   # 指定镜像和版本
     ports:
       - 5306:3306
@@ -9,10 +9,11 @@ services:
       MYSQL_ROOT_PASSWORD: root                      #密码
      # MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
 #    volumes:
-#      - "${MYSQL_DIR}/data:/var/lib/mysql"           # 挂载数据目录
+#      - "D:\docker\mysql\data:/var/lib/mysql"           # 挂载数据目录
 #      - "${MYSQL_DIR}/config:/etc/mysql/conf.d"      # 挂载配置文件目录
   redis:
     # 指定镜像
+    container_name: redis-docker-local
     image: redis:latest
     ports:
       # 端口映射
@@ -27,7 +28,7 @@ services:
 
   nacos:
     image: nacos/nacos-server:latest
-    container_name: nacos-standalone
+    container_name: nacos-standalone-local
     environment:
       - MODE=standalone
     volumes:
@@ -36,10 +37,12 @@ services:
       - 8848:8848
 
   zookeeper:
+    container_name: zookeeper-docker-local
     image: zookeeper
     ports:
       - 2181:2181
   dubbo-admin:
+    container_name: dubbo-admin-docker-local
     image: apache/dubbo-admin
     ports:
       - 8888:8080
