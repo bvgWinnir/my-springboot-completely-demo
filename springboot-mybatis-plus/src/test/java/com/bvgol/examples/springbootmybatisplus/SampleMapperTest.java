@@ -1,10 +1,8 @@
 package com.bvgol.examples.springbootmybatisplus;
 
 
-import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.bvgol.examples.springbootmybatisplus.mapper.UserMapper;
 import com.bvgol.examples.springbootmybatisplus.model.User;
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.util.List;
 
 /**
- * @Classname SampleTest
+ * @Classname SampleMapperTest
  * @Description TODO
  * @Date 2020/4/26 16:10
  * @Created by guochen
@@ -27,7 +25,7 @@ import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class SampleTest {
+public class SampleMapperTest {
 
     @Autowired
     private UserMapper userMapper;
@@ -52,9 +50,13 @@ public class SampleTest {
     @Test
     public void testSelectWithLambda() {
         System.out.println(("----- selectAll method testSelectWithLambda ------"));
-        List<User> lambdaUsers = userMapper.selectList(new LambdaQueryWrapper<User>().eq(User::getId, 2L));
+        List<User> lambdaUsers = userMapper.selectList(new LambdaQueryWrapper<User>().eq(User::getUserId, 2L));
         lambdaUsers.forEach(System.out::println);
     }
+
+    /**
+     * Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
+     * */
 
 
 }
