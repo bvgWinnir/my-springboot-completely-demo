@@ -16,6 +16,8 @@
         <module>springboot-mybatis-xml-annotion</module>
         <module>springboot-redis</module>
         <module>springboot-dubbo-nacos</module>
+        <module>sptingboot-swagger</module>
+        <module>springboot-sercurity</module>
     </modules>
 
 

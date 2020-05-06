@@ -95,12 +95,8 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 .gitignore
-springboot-args-webflux/src/main/resources/templates/
-springboot-args-webflux/target/generated-sources/
-springboot-args-webflux/target/generated-test-sources/
+springboot-args-webflux/target/
 springboot-dubbo-nacos/src/
-springboot-mybatis-plus/target/generated-sources/
-springboot-mybatis-plus/target/generated-test-sources/
+springboot-mybatis-plus/target/
 springboot-mybatis-xml-annotion/src/main/java/com/bvgol/examples/springbootmybatisxmlannotion/model/
-springboot-redis/target/generated-sources/
-springboot-redis/target/generated-test-sources/
+springboot-redis/target/

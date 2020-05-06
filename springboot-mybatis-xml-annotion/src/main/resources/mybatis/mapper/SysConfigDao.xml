@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bvgol.examples.springbootmybatisxmlannotion.dao.SysConfigDao">
+
+    <resultMap type="com.bvgol.examples.springbootmybatisxmlannotion.entity.SysConfig" id="SysConfigMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="paramKey" column="param_key" jdbcType="VARCHAR"/>
+        <result property="paramValue" column="param_value" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="OTHER"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="SysConfigMap">
+        select
+          id, param_key, param_value, status, remark
+        from test.sys_config
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SysConfigMap">
+        select
+          id, param_key, param_value, status, remark
+        from test.sys_config
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SysConfigMap">
+        select
+          id, param_key, param_value, status, remark
+        from test.sys_config
+        <where>
+            <if test="id != null">
+                and id = #{id}
+            </if>
+            <if test="paramKey != null and paramKey != ''">
+                and param_key = #{paramKey}
+            </if>
+            <if test="paramValue != null and paramValue != ''">
+                and param_value = #{paramValue}
+            </if>
+            <if test="status != null">
+                and status = #{status}
+            </if>
+            <if test="remark != null and remark != ''">
+                and remark = #{remark}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into test.sys_config(param_key, param_value, status, remark)
+        values (#{paramKey}, #{paramValue}, #{status}, #{remark})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update test.sys_config
+        <set>
+            <if test="paramKey != null and paramKey != ''">
+                param_key = #{paramKey},
+            </if>
+            <if test="paramValue != null and paramValue != ''">
+                param_value = #{paramValue},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from test.sys_config where id = #{id}
+    </delete>
+
+</mapper>
