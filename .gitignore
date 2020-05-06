@@ -2,7 +2,7 @@
 ### Java template
 # Compiled class file
 *.class
-target
+target/
 # Log file
 *.log
 
@@ -98,16 +98,9 @@ fabric.properties
 springboot-args-webflux/src/main/resources/templates/
 springboot-args-webflux/target/generated-sources/
 springboot-args-webflux/target/generated-test-sources/
-springboot-dubbo-nacos/springboot-dubbo-nacos-consumer/src/
-springboot-dubbo-nacos/springboot-dubbo-nacos-interface/src/
-springboot-dubbo-nacos/springboot-dubbo-nacos-privder/src/
 springboot-dubbo-nacos/src/
-springboot-mybatis-plus/src/main/resources/mapper/
 springboot-mybatis-plus/target/generated-sources/
 springboot-mybatis-plus/target/generated-test-sources/
 springboot-mybatis-xml-annotion/src/main/java/com/bvgol/examples/springbootmybatisxmlannotion/model/
-springboot-mybatis-xml-annotion/src/main/resources/mybatis/mapper/
-springboot-redis/src/main/resources/static/
-springboot-redis/src/main/resources/templates/
 springboot-redis/target/generated-sources/
 springboot-redis/target/generated-test-sources/
