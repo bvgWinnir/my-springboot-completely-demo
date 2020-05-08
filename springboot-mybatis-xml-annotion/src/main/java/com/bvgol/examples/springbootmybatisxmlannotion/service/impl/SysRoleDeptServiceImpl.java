@@ -4,6 +4,7 @@ import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysRoleDeptDao;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysRoleDeptService;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -34,7 +35,7 @@ public class SysRoleDeptServiceImpl implements SysRoleDeptService {
      * 查询多条数据
      *
      * @param offset 查询起始位置
-     * @param limit 查询条数
+     * @param limit  查询条数
      * @return 对象列表
      */
     @Override
@@ -49,9 +50,31 @@ public class SysRoleDeptServiceImpl implements SysRoleDeptService {
      * @return 实例对象
      */
     @Override
+    @Transactional
     public SysRoleDept insert(SysRoleDept sysRoleDept) {
         this.sysRoleDeptDao.insert(sysRoleDept);
         return sysRoleDept;
+    }
+
+    /**
+     * 修改数据
+     *
+     * @param sysRoleDept 实例对象
+     * @return 实例对象
+     */
+    @Override
+    @Transactional
+    public Integer updateE(SysRoleDept sysRoleDept) throws RuntimeException {
+        int update =0;
+        try {
+             update = this.sysRoleDeptDao.update(sysRoleDept);
+            int a = 1/0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("");
+        }
+        return update;
+
     }
 
     /**

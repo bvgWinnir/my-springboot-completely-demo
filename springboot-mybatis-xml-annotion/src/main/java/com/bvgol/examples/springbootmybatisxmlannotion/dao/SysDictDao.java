@@ -1,6 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.dao;
 
 import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysDict;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import java.util.List;
  * @author makejava
  * @since 2020-05-03 21:55:29
  */
+@Mapper
 public interface SysDictDao {
 
     /**

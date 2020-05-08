@@ -36,6 +36,8 @@ public interface SysRoleDeptService {
      */
     SysRoleDept insert(SysRoleDept sysRoleDept);
 
+    Integer updateE(SysRoleDept sysRoleDept) throws Exception;
+
     /**
      * 修改数据
      *

@@ -1,0 +1,49 @@
+package com.bvgol.examples.springbootmybatisxmlannotion.dao;
+
+
+import cn.hutool.core.util.IdUtil;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.Assert;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+/**
+ * @Classname SysRoleDeptDaoTest
+ * @Description TODO
+ * @Date 2020/5/6 16:37
+ * @Created by guochen
+ */
+@Slf4j
+@SpringBootTest
+public class SysRoleDeptDaoTest {
+    @Resource
+    private SysRoleDeptDao sysRoleDeptDao;
+
+    @Test
+    void queryAll() {
+        List<SysRoleDept> sysRoleDepts = sysRoleDeptDao.queryAll(null);
+        Assert.assertEquals(5, sysRoleDepts.size());
+        sysRoleDepts.forEach(System.out::println);
+    }
+
+    @Test
+    void testInsertReturn(){
+
+        SysRoleDept sysRoleDept = new SysRoleDept();
+        sysRoleDept.setId(IdUtil.getSnowflake(1L,1L).nextId());
+        sysRoleDept.setRoleId(0L);
+        sysRoleDept.setDeptId(0L);
+
+        int insert = sysRoleDeptDao.insert(sysRoleDept);
+
+    }
+
+
+
+
+
+}
