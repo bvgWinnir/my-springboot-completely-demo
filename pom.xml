@@ -18,6 +18,7 @@
         <module>springboot-dubbo-nacos</module>
         <module>sptingboot-swagger</module>
         <module>springboot-sercurity</module>
+        <module>springboot-dubbo-zookeeper</module>
     </modules>
 
 
