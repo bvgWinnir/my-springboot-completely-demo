@@ -66,5 +66,13 @@
     <delete id="deleteById">
         delete from test.sys_role_dept where id = #{id}
     </delete>
+    <select id="findCount" resultType="java.util.Map">
+        SELECT
+            Count(sys_role_dept.id) AS id_count
+                ,
+            Sum( CAST( 1 AS UNSIGNED ) ) AS id
+        FROM
+            sys_role_dept
+    </select>
 
 </mapper>

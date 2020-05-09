@@ -7,9 +7,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.Assert;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Classname SysRoleDeptDaoTest
@@ -39,6 +42,20 @@ public class SysRoleDeptDaoTest {
         sysRoleDept.setDeptId(0L);
 
         int insert = sysRoleDeptDao.insert(sysRoleDept);
+
+    }
+
+    @Test
+    //mysql 列经过类型转换 之后 的处理
+    void testRestulMap(){
+        Map<String , Object> count = sysRoleDeptDao.findCount();
+
+        BigDecimal id = (BigDecimal)count.get("id");
+        Long id_count = (Long)count.get("id_count");
+
+        System.out.println("id = " + id);
+        System.out.println("id_count = " + id_count);
+
 
     }
 

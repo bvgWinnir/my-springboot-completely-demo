@@ -4,6 +4,7 @@ import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 角色与部门对应关系(SysRoleDept)表数据库访问层
@@ -64,4 +65,5 @@ public interface SysRoleDeptDao {
      */
     int deleteById(Long id);
 
+    Map<String, Object> findCount();
 }
