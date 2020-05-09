@@ -1,0 +1,15 @@
+server:
+  port: 9001
+
+dubbo:
+  application:
+  ##### 注册服务的名称
+    name: zk-consumer
+  ##### 注册中心地址
+  registry:
+#    address: nacos://127.0.0.1:8848
+    address: zookeeper://127.0.0.1:2181
+      ##### 调用服务超时时间
+  consumer:
+    timeout: 5000
+
