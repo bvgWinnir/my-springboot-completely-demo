@@ -25,6 +25,8 @@
         <module>sptingboot-swagger</module>
         <module>springboot-sercurity</module>
         <module>springboot-dubbo-zookeeper</module>
+        <module>springboot-maven-profile</module>
+        <module>springboot-session</module>
     </modules>
 
 

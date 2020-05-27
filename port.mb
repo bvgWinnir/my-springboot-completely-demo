@@ -8,3 +8,5 @@ springboot-mybatis-xml-annotion:10003
 springboot-redis:               10004
 springboot-sercurity:           10005
 sptingboot-swagger:             10006
+springboot-dubbo-zk-consumer:   9001
+springboot-dubbo-zk-privder:    9002
