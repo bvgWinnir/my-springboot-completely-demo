@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.entity;
 
-import java.util.Date;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 系统用户(SysUser)实体类
@@ -119,4 +119,18 @@ public class SysUser implements Serializable {
         this.createTime = createTime;
     }
 
+    @Override
+    public String toString() {
+        return "SysUser{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", status=" + status +
+                ", deptId=" + deptId +
+                ", createTime=" + createTime +
+                '}';
+    }
 }

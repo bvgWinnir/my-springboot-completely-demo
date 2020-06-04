@@ -2,7 +2,9 @@ package com.bvgol.examples.springbootmybatisxmlannotion.controller;
 
 import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysUserRole;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysUserRoleService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 

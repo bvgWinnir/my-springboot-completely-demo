@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service.impl;
 
-import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysOss;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysOssDao;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysOss;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysOssService;
 import org.springframework.stereotype.Service;
 

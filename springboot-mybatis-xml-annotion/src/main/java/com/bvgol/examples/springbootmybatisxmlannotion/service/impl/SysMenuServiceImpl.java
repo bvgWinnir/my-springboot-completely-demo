@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service.impl;
 
-import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysMenu;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysMenuDao;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysMenu;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysMenuService;
 import org.springframework.stereotype.Service;
 

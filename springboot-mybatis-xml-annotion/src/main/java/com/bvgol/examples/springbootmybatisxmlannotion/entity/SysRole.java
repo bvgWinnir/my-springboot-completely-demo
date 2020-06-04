@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.entity;
 
-import java.util.Date;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 角色(SysRole)实体类
@@ -71,4 +71,14 @@ public class SysRole implements Serializable {
         this.createTime = createTime;
     }
 
+    @Override
+    public String toString() {
+        return "SysRole{" +
+                "roleId=" + roleId +
+                ", roleName='" + roleName + '\'' +
+                ", remark='" + remark + '\'' +
+                ", deptId=" + deptId +
+                ", createTime=" + createTime +
+                '}';
+    }
 }

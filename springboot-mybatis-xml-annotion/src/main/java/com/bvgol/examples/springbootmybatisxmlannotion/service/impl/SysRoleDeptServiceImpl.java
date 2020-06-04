@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service.impl;
 
-import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysRoleDeptDao;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysRoleDeptService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -72,6 +72,20 @@ public class SysRoleDeptServiceImpl implements SysRoleDeptService {
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("");
+        }
+        return update;
+
+    }
+    @Override
+    @Transactional
+    public Integer updateNotthrow(SysRoleDept sysRoleDept) throws Exception {
+        int update =0;
+        try {
+            update = this.sysRoleDeptDao.update(sysRoleDept);
+            int a = 1/0;
+        } catch (Exception e) {
+            e.printStackTrace();
+//            throw new RuntimeException("");
         }
         return update;
 

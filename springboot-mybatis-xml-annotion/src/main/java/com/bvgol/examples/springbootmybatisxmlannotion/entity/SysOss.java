@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.entity;
 
-import java.util.Date;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * 文件上传(SysOss)实体类

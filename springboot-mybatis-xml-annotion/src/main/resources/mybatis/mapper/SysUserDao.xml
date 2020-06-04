@@ -14,6 +14,8 @@
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
+
+
     <!--查询单个-->
     <select id="queryById" resultMap="SysUserMap">
         select

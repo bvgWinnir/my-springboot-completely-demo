@@ -8,8 +8,23 @@
         <result property="roleId" column="role_id" jdbcType="INTEGER"/>
     </resultMap>
 
+    <resultMap type="com.bvgol.examples.springbootmybatisxmlannotion.entity.SysUserRole" id="1vs4" >
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="roleId" column="role_id" jdbcType="INTEGER"/>
+        <collection property="roleId"
+                    ofType="com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRole"
+                    column="role_id">
+            <result property="roleId" column="role_id" jdbcType="INTEGER"/>
+            <result property="roleName" column="role_name" jdbcType="VARCHAR"/>
+            <result property="remark" column="remark" jdbcType="VARCHAR"/>
+            <result property="deptId" column="dept_id" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        </collection>
+    </resultMap>
+
     <!--查询单个-->
-    <select id="queryById" resultMap="SysUserRoleMap">
+    <select id="queryById" resultMap="1vs4">
         select
           id, user_id, role_id
         from test.sys_user_role

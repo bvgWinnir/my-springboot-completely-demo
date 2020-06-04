@@ -1,6 +1,8 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service;
 
 import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 /**
@@ -37,6 +39,9 @@ public interface SysRoleDeptService {
     SysRoleDept insert(SysRoleDept sysRoleDept);
 
     Integer updateE(SysRoleDept sysRoleDept) throws Exception;
+
+    @Transactional
+    Integer updateNotthrow(SysRoleDept sysRoleDept) throws RuntimeException, Exception;
 
     /**
      * 修改数据

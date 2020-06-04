@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service.impl;
 
-import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysDept;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysDeptDao;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysDept;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysDeptService;
 import org.springframework.stereotype.Service;
 

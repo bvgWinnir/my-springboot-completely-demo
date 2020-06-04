@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service.impl;
 
-import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleMenu;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysRoleMenuDao;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleMenu;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysRoleMenuService;
 import org.springframework.stereotype.Service;
 

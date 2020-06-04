@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.service.impl;
 
-import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysUserRole;
 import com.bvgol.examples.springbootmybatisxmlannotion.dao.SysUserRoleDao;
+import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysUserRole;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysUserRoleService;
 import org.springframework.stereotype.Service;
 

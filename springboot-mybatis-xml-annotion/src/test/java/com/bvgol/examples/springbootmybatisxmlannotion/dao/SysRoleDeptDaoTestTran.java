@@ -95,6 +95,22 @@ public class SysRoleDeptDaoTestTran {
         Assert.assertEquals(1L, integer.longValue());
     }
 
+    @Test
+    void  testInsert005() throws Exception {
+
+        // 事务在这个情况下不生效了
+        // 需要在方法级别抛出异常
+        //try中的异常需要在 catch中不抛出
+        SysRoleDept sysRoleDept = new SysRoleDept();
+        sysRoleDept.setId(4L);
+        sysRoleDept.setRoleId(440L);
+        sysRoleDept.setDeptId(0L);
+
+        Integer integer = sysRoleDeptService.updateNotthrow(sysRoleDept);
+
+        Assert.assertEquals(1L, integer.longValue());
+    }
+
 
 
 }

@@ -15,13 +15,13 @@ import java.util.Map;
 
 /**
  * @Classname SysRoleDeptDaoTest
- * @Description TODO
+ * @Description Cascade   级联操作
  * @Date 2020/5/6 16:37
  * @Created by guochen
  */
 @Slf4j
 @SpringBootTest
-public class SysRoleDeptDaoTest {
+public class SysRoleDeptDaoTestCascade {
     @Resource
     private SysRoleDeptDao sysRoleDeptDao;
 
