@@ -1,20 +1,16 @@
 package com.bvgol.examples.springbootredis;
 
 import cn.hutool.core.util.IdUtil;
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.bvgol.examples.springbootredis.com.utils.RedisUtil;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.core.StringRedisTemplate;
 
 import javax.annotation.Resource;
 import java.time.LocalDate;
 import java.util.Date;
-import java.util.Locale;
 
 @SpringBootTest
 class SpringbootRedisApplicationTests {
