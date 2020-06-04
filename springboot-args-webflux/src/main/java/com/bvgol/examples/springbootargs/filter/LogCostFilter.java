@@ -1,9 +1,9 @@
 package com.bvgol.examples.springbootargs.filter;
 
 import org.springframework.web.filter.OncePerRequestFilter;
-import org.springframework.web.servlet.function.ServerResponse;
 
-import javax.servlet.*;
+import javax.servlet.FilterChain;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

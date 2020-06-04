@@ -1,8 +1,13 @@
 package com.bvgol.examples.springbootargs.controller;
 
+import com.bvgol.examples.springbootargs.pojo.Demo;
+import com.bvgol.examples.springbootargs.vo.DemoVo;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,20 +31,22 @@ public class ArgsController {
         return map;
     }
 
-    @GetMapping("/postString")
-    public Object postString(@RequestBody() String obj) {
+    @PostMapping("/postString")
+    public Object postString(@RequestBody String obj) {
         return null;
     }
 
-    @PostMapping("/getString/{str}")
+    @GetMapping("/getString/{str}")
     public Object getString(@PathVariable("str") String str ) {
         return str;
     }
 
 
-    @PostMapping("/xxx/xxx/")
-    public Object postObj(@RequestBody() Object obj) {
-        return null;
+    @PostMapping("/list")
+    public Object postObj(@RequestBody DemoVo vo) {
+        Demo demo = new Demo();
+
+        return demo;
     }
 
 //    @GetMapping("/xxx/xxx/{xx}")
