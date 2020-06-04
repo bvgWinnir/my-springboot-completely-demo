@@ -8,7 +8,12 @@ import java.io.Serializable;
 @ApiModel("swaggerDome实体")
 public class TestEntity implements Serializable {
     // 名称
-    @ApiModelProperty(name = "name",value = "名称：用户名称", required =true, notes = "这个是提示信息")
+    @ApiModelProperty(name = "name",
+            value = "名称：用户名称",
+            required =true,
+            access = "access",
+            notes = "这个是提示信息",
+            dataType = "dataType")
     private String name;
     // id
     @ApiModelProperty(value = "用户id，默认为010001",
@@ -16,6 +21,12 @@ public class TestEntity implements Serializable {
  
     private String id;
 
+    @ApiModelProperty(name = "name",
+            value = "名称：用户名称",
+            required =true,
+            access = "access",
+            notes = "这个是提示信息",
+            dataType = "dataType")
     public String getName() {
         return name;
     }
