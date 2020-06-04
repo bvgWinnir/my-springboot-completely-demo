@@ -1,8 +1,8 @@
 package com.bvgol.examples.dubbo.zk.impl;
 
+import com.alibaba.dubbo.config.annotation.Service;
 import com.bvgol.examples.dubbo.zk.api.HelloService;
 import lombok.extern.slf4j.Slf4j;
-import com.alibaba.dubbo.config.annotation.Service;
 
 import java.util.UUID;
 
