@@ -2,7 +2,6 @@ package com.bvgol.examples.springbootmybatisplus.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.bvgol.examples.springbootmybatisplus.model.User;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Classname UserService

@@ -3,7 +3,6 @@ package com.bvgol.examples.springbootmybatisplus;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.bvgol.examples.springbootmybatisplus.mapper.UserMapper;
 import com.bvgol.examples.springbootmybatisplus.model.User;
 import com.bvgol.examples.springbootmybatisplus.service.UserService;
 import lombok.extern.slf4j.Slf4j;

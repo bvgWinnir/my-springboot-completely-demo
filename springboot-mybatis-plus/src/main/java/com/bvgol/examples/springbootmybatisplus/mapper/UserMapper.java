@@ -1,9 +1,7 @@
 package com.bvgol.examples.springbootmybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-
 import com.bvgol.examples.springbootmybatisplus.model.User;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Classname UserMapper

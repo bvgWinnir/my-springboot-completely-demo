@@ -1,10 +1,10 @@
 package com.bvgol.examples.springbootmybatisplus.service;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bvgol.examples.springbootmybatisplus.mapper.UserMapper;
 import com.bvgol.examples.springbootmybatisplus.model.User;
-import org.springframework.stereotype.Service;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 /**
  * @Classname UserServiceImpl
