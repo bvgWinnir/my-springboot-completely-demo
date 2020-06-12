@@ -16,6 +16,7 @@
         <module>springboot-dubbo-zk-consumer</module>
         <module>springboot-dubbo-zk-interface</module>
         <module>springboot-dubbo-zk-privder</module>
+        <module>springboot-dubbo-zk-privder2</module>
     </modules>
 
     <properties>

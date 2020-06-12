@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9004
 
 dubbo:
   application:
@@ -7,7 +7,6 @@ dubbo:
     name: zk-consumer
   ##### 注册中心地址
   registry:
-#    address: nacos://127.0.0.1:8848
     address: zookeeper://127.0.0.1:2181
       ##### 调用服务超时时间
   consumer:
