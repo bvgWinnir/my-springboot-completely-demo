@@ -29,6 +29,9 @@
         <module>springboot-session</module>
         <module>springboot-knife4j</module>
         <module>springboot-mybatis-xml-multiple</module>
+        <module>springboot-JAPIDocs</module>
+        <module>springboot-logback</module>
+        <module>springboot-exception</module>
 
     </modules>
 
