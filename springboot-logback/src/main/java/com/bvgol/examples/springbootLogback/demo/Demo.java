@@ -1,4 +1,4 @@
-package com.bvgol.examples.springbootLogback;
+package com.bvgol.examples.springbootLogback.demo;
 
 import ch.qos.logback.classic.Logger;
 import lombok.extern.slf4j.Slf4j;
