@@ -1,13 +1,9 @@
 package com.bvgol.examples.springbootargs.controller;
 
-import com.bvgol.examples.springbootargs.pojo.Demo;
 import com.bvgol.examples.springbootargs.vo.DemoVo;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,48 +16,49 @@ import java.util.Map;
 @RestController("/args")
 public class ArgsController {
 
-
-    @PostMapping("/postMap")
-    public Object postMap(@RequestBody() Map map) {
-        return map;
-    }
-
-    @GetMapping("/getMap")
-    public Object getMap(@RequestParam() Map map) {
-        return map;
-    }
-
-    @PostMapping("/postString")
-    public Object postString(@RequestBody String obj) {
-        return null;
-    }
-
-    @GetMapping("/getString/{str}")
-    public Object getString(@PathVariable("str") String str ) {
+    /**
+     * ?    1:@RequestParam  2:obj
+     * /{}  1:@PathVariable("str") String str
+     * from 1:@RequestParam  2:obj
+     * json @RequestBody+obj
+     * */
+    @GetMapping("/get")
+    public Object get(@RequestParam() String str) {
         return str;
     }
 
-
-    @PostMapping("/list")
-    public Object postObj(@RequestBody DemoVo vo) {
-        Demo demo = new Demo();
-
-        return demo;
+    @GetMapping("/getMore")
+    public Object getMore(@RequestParam() Map map) {
+        return map;
     }
 
-//    @GetMapping("/xxx/xxx/{xx}")
-//    public Object getObj(@RequestParam() Object obj) {
-//        return null;
-//    }
-//
-//
-//    @PostMapping("/xxx/xxx/")
-//    public Object postList(@RequestBody() Object obj) {
-//        return null;
-//    }
-//
-//    @GetMapping("/xxx/xxx/{xx}")
-//    public Object getList(@RequestParam() Object obj) {
-//        return null;
-//    }
+    @GetMapping("/getString/{str}")
+    public Object getString1(@PathVariable("str") String str ) {
+        return str;
+    }
+
+    @GetMapping("/getStringMore/{str}{str2}")
+    public Object getString2(@PathVariable("str") String str, @PathVariable("str2") String str2) {
+        return str+"--"+str2;
+    }
+
+    @PostMapping("/postFrom")
+    public Object postMap(@RequestParam String map) {
+        return map;
+    }
+
+    @PostMapping("/postFromMore")
+    public Object postFromMore(Map map) {
+        return map;
+    }
+
+    @PostMapping("/postJson")
+    public Object postJson(@RequestBody String obj) {
+        return obj;
+    }
+
+    @PostMapping("/postJsonMore")
+    public Object postJsonMore(@RequestBody DemoVo vo) {
+        return vo;
+    }
 }
