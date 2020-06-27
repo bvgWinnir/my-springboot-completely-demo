@@ -32,6 +32,7 @@
         <module>springboot-JAPIDocs</module>
         <module>springboot-logback</module>
         <module>springboot-exception</module>
+        <module>springboot-mybatis-plus-diboot</module>
 
     </modules>
 
