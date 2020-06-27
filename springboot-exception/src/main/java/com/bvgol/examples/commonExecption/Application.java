@@ -27,5 +27,8 @@ public class Application {
      * 异常处理方法的参数可以有异常实例、HttpServletResponse 以及 HttpServletRequest、Model 等。
      *  异常处理方法的返回值可以是一段 JSON、一个 ModelAndView、一个逻辑视图名等。
      *
+     *
+     * 访问：http://localhost:8080/hello，可以看到错误提示页面。
+     * 访问：http://localhost:8080/json，可以得到返回内容：
      * */
 }
