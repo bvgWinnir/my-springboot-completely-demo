@@ -33,6 +33,7 @@
         <module>springboot-logback</module>
         <module>springboot-exception</module>
         <module>springboot-mybatis-plus-diboot</module>
+        <module>springboot-examples-model</module>
 
     </modules>
 
