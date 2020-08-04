@@ -10,7 +10,7 @@ import javax.servlet.http.HttpSession;
 
 public class HelloController {
 
-    @Value("${server.port}")
+    @Value(value = "${server.port}")
     Integer port;
 
     @GetMapping("/set")
