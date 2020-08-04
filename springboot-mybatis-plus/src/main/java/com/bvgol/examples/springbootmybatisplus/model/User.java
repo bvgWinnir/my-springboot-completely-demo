@@ -14,9 +14,8 @@ import java.util.Date;
  * @Date 2020/5/6 9:11
  * @Created by guochen
  */
- @Slf4j
- 
-  
+@Slf4j
+
 @TableName(value = "sys_user")
 public class User {
     @TableId(value = "user_id", type = IdType.AUTO)
@@ -70,23 +69,7 @@ public class User {
     @TableField(value = "create_time")
     private Date createTime;
 
-    public static final String COL_USER_ID = "user_id";
 
-    public static final String COL_USERNAME = "username";
-
-    public static final String COL_PASSWORD = "password";
-
-    public static final String COL_SALT = "salt";
-
-    public static final String COL_EMAIL = "email";
-
-    public static final String COL_MOBILE = "mobile";
-
-    public static final String COL_STATUS = "status";
-
-    public static final String COL_DEPT_ID = "dept_id";
-
-    public static final String COL_CREATE_TIME = "create_time";
 
     /**
      * @return user_id

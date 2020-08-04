@@ -18,4 +18,7 @@
     <!--@mbg.generated-->
     user_id, username, `password`, salt, email, mobile, `status`, dept_id, create_time
   </sql>
+  <select id="selectPageVo" resultType="com.bvgol.examples.springbootmybatisplus.model.User">
+    SELECT * FROM sys_user WHERE status=#{status,jdbcType=INTEGER}
+</select>
 </mapper>

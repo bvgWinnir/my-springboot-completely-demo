@@ -1,8 +1,9 @@
 package com.bvgol.examples.springbootmybatisplus;
 
-
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bvgol.examples.springbootmybatisplus.mapper.UserMapper;
 import com.bvgol.examples.springbootmybatisplus.model.User;
 import lombok.extern.slf4j.Slf4j;
@@ -37,11 +38,12 @@ public class SampleMapperTest {
         Assert.assertEquals(5, userList.size());
         userList.forEach(System.out::println);
     }
+
     @Test
     public void testSelectWithWrapper() {
         System.out.println(("----- selectAll method testSelectWithWrapper ------"));
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("name","Sandy");
+        queryWrapper.eq("name", "Sandy");
         List<User> userList = userMapper.selectList(queryWrapper);
         Assert.assertEquals(5, userList.size());
         userList.forEach(System.out::println);
@@ -58,5 +60,20 @@ public class SampleMapperTest {
      * Unable to find a @SpringBootConfiguration, you need to use @ContextConfiguration or @SpringBootTest(classes=...) with your test
      * */
 
+
+    @Test
+    public void page(){
+        Page page = new Page();
+        IPage<User> userIPage = userMapper.selectPageVo(page, 1);
+
+    }
+
+    @Test
+    public void page2(){
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("status", 1);
+        Page page = userMapper.selectPage(new Page(1, 2), queryWrapper);
+
+    }
 
 }
