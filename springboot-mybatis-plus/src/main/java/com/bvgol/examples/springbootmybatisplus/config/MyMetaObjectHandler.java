@@ -20,6 +20,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         //this.setFieldValByName("operator", "Jerry", metaObject);
         //this.setInsertFieldValByName("operator", "Jerry", metaObject);
         this.strictInsertFill(metaObject,"version",Integer.class,1);
+        this.strictInsertFill(metaObject,"deleted",Integer.class,0);
     }
 
     @Override
@@ -31,4 +32,5 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         //this.setFieldValByName("operator", "Tom", metaObject);
         //this.setUpdateFieldValByName("operator", "Tom", metaObject);
     }
+
 }

@@ -11,6 +11,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -76,4 +77,20 @@ public class SampleMapperTest {
 
     }
 
+    @Test
+    public void insert(){
+        User user = new User();
+        user.setEmail("@qqq.qqcom");
+        user.setUsername("xxxxxxxxxx2qq");
+        userMapper.insert(user);
+
+        User user1 = userMapper.selectOne(new LambdaQueryWrapper<User>().eq(User::getEmail, "@qqq.qqcom"));
+        System.out.println(user1);
+    }
+
+    @Test
+    public void logicDelete(){
+
+        int i = userMapper.deleteById(902);
+    }
 }

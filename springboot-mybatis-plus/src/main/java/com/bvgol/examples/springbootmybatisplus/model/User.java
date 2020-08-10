@@ -67,9 +67,15 @@ public class User {
     @TableField(value = "create_time",fill = FieldFill.INSERT)
     private Date createTime;
 
+    @TableField(value = "update_time",fill = FieldFill.UPDATE)
+    private Date updateTime;
+
     @Version
     @TableField(fill = FieldFill.INSERT)
     private Integer version;
 
+    @TableLogic
+    @TableField(fill = FieldFill.INSERT)
+    private Integer deleted;
 
 }

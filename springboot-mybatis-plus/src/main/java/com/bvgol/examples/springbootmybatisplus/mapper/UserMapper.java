@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.bvgol.examples.springbootmybatisplus.model.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 /**
  * @Classname UserMapper
@@ -12,7 +13,7 @@ import org.apache.ibatis.annotations.Param;
  * @Date 2020/5/6 9:11
  * @Created by guochen
  */
-
+@Repository//为了Autowired
 public interface UserMapper extends BaseMapper<User> {
     /**
      * <p>
