@@ -12,12 +12,12 @@ import org.slf4j.LoggerFactory;
  * @date 2020/6/2721:22
  */
 public class Demo {
- //这里的包可能没有引对
- private Logger xiaojia = (Logger) LoggerFactory.getLogger("xiaojia");
-
+    //这里的包可能没有引对
+    private Logger xiaojia = (Logger) LoggerFactory.getLogger("xiaojia");
 
 }
+
 @Slf4j(topic = "xiaojia")
- class XiaoJiaTest {
+class XiaoJiaTest {
 
 }

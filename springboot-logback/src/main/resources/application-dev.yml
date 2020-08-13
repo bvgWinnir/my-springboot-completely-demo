@@ -1,5 +1,0 @@
-logging:
-  level:
-    root: info
-  path: ./dev/logs
-  config: classpath:/logback-dev.xml

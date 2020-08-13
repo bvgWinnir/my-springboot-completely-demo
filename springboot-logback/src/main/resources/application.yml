@@ -1,4 +1,7 @@
 logging:
   level:
     root: info
-  path: ./logs
+  path: ./springboot-logback/src/logs
+
+server:
+  port: 10086
