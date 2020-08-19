@@ -38,5 +38,7 @@ public class MybatisPlusConfig {
 //        return new LogicSqlInjector();
 //    }
 
-    //性能分析插件
+    //
+    //配置MetaObjectHandler
+
 }
