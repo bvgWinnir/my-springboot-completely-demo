@@ -23,6 +23,6 @@ public class HelloController {
 
     @GetMapping("/json")
     public String json() throws MyException {
-        throw new MyException("发生错误2");
+        throw new MyException("发生错误2,自定义异常");
     }
 }
