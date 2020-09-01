@@ -3,7 +3,9 @@ package com.bvgol.examples.springbootmybatisplus;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.bvgol.examples.springbootmybatisplus.model.TestBit;
 import com.bvgol.examples.springbootmybatisplus.model.User;
+import com.bvgol.examples.springbootmybatisplus.service.TestBitService;
 import com.bvgol.examples.springbootmybatisplus.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -26,6 +28,10 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SampleServcieTest {
+
+    @Autowired
+    private TestBitService testBitService;
+
 
     @Autowired
     private UserService userService;
@@ -54,5 +60,15 @@ public class SampleServcieTest {
         lambdaUsers.forEach(System.out::println);
     }
 
+
+    @Test
+    public void testbit(){
+        List<TestBit> list = testBitService.list();
+        list.forEach(System.out::println);
+
+        //bit 0==false   1==true
+        //TestBit(id=1, sex=false, name=111, brithday=null)
+        //TestBit(id=2, sex=true, name=222, brithday=Tue Sep 01 11:37:30 CST 2020)
+    }
 
 }
