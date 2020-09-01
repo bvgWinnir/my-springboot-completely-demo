@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2020/6/2720:56
  */
 @RestController
+@RequestMapping("exception")
 public class HelloController {
 
     @GetMapping("/hello")
@@ -25,4 +26,6 @@ public class HelloController {
     public String json() throws MyException {
         throw new MyException("发生错误2,自定义异常");
     }
+
+
 }
