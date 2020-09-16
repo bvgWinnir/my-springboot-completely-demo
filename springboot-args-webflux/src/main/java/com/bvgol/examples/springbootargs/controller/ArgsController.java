@@ -21,7 +21,7 @@ public class ArgsController {
      * /{}  1:@PathVariable("str") String str
      * from 1:@RequestParam  2:obj
      * json @RequestBody+obj
-     * */
+     */
     @GetMapping("/get")
     public Object get(@RequestParam() String str) {
         return str;
@@ -33,13 +33,13 @@ public class ArgsController {
     }
 
     @GetMapping("/getString/{str}")
-    public Object getString1(@PathVariable("str") String str ) {
+    public Object getString1(@PathVariable("str") String str) {
         return str;
     }
 
     @GetMapping("/getStringMore/{str}{str2}")
     public Object getString2(@PathVariable("str") String str, @PathVariable("str2") String str2) {
-        return str+"--"+str2;
+        return str + "--" + str2;
     }
 
     @PostMapping("/postFrom")

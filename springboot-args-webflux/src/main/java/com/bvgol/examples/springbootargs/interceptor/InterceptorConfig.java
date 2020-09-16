@@ -6,10 +6,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 public class InterceptorConfig extends WebMvcConfigurerAdapter {
- 
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LogCostInterceptor()).addPathPatterns("/login").excludePathPatterns("/login","session/login","/postMap");
+        registry.addInterceptor(new LogCostInterceptor()).addPathPatterns("/login").excludePathPatterns("/login", "session/login", "/postMap");
         super.addInterceptors(registry);
     }
 }
