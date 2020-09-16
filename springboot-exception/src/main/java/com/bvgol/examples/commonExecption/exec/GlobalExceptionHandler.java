@@ -23,16 +23,16 @@ public class GlobalExceptionHandler {
         return r;
     }
 
-    @ExceptionHandler(value = Exception.class)
-    @ResponseBody
-    public ErrorInfo<String> jsonExceptionHandler(HttpServletRequest req, Exception e) throws Exception {
-        ErrorInfo<String> r = new ErrorInfo<>();
-        r.setMessage(e.getMessage());
-        r.setCode(ErrorInfo.ERROR);
-        r.setData("Some Data");
-        r.setUrl(req.getRequestURL().toString());
-        return r;
-    }
+//    @ExceptionHandler(value = Exception.class)
+//    @ResponseBody
+//    public ErrorInfo<String> jsonExceptionHandler(HttpServletRequest req, Exception e) throws Exception {
+//        ErrorInfo<String> r = new ErrorInfo<>();
+//        r.setMessage(e.getMessage());
+//        r.setCode(ErrorInfo.ERROR);
+//        r.setData("Some Data");
+//        r.setUrl(req.getRequestURL().toString());
+//        return r;
+//    }
 
     public static final String DEFAULT_ERROR_VIEW = "error";
     @ExceptionHandler(value = Exception.class)
