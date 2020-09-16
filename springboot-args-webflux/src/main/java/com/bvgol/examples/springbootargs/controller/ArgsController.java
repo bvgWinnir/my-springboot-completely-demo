@@ -13,7 +13,8 @@ import java.util.Map;
  * @Created by guochen
  */
 @Slf4j
-@RestController("/args")
+@RestController
+@RequestMapping("/args")
 public class ArgsController {
 
     /**
