@@ -11,9 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2020/6/2720:52
  */
 @SpringBootApplication
-public class Application {
+public class ExceptionApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ExceptionApplication.class, args);
     }
 
     /**

@@ -27,5 +27,10 @@ public class HelloController {
         throw new MyException("发生错误2,自定义异常");
     }
 
+    @GetMapping("/jsonE")
+    public String jsonE() throws Exception {
+        throw new Exception("发生错误2,自定义异常");
+    }
+
 
 }

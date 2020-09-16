@@ -17,6 +17,4 @@ public class ErrorInfo<T> {
 
     private T data;
 
-// 省略getter和setter
-
 }
