@@ -1,8 +1,6 @@
 package com.bvgol.list;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -55,4 +53,37 @@ public class StreamTest {
         List<User> j = users.stream().filter(user -> user.getName().contains("J")).collect(Collectors.toList());
         j.forEach(System.out::println);
     }
+
+    List<ClassA> aList = new ArrayList<>(Arrays.asList(
+            new ClassA("1", "张三"),
+            new ClassA("2", "李四"),
+            new ClassA("3", "王五")
+    ));
+    List<ClassB> bList = new ArrayList<>(Arrays.asList(
+            new ClassB("2", "李某"),
+            new ClassB("3", "王某"),
+            new ClassB("4", "赵某")
+    ));
+
+    public void xxx(){
+//aList与bList的交集
+        List<ClassA> intersectA = aList
+                .stream() //获取第一个集合的Stream1
+                .filter(  //取出Stream1中符合条件的元素组成新的Stream2，lambda表达式1返回值为true时为符合条件
+                        a ->  //lambda表达式1，a为lambda表达式1的参数，是Stream1中的每个元素
+                                bList.stream() //获取第二个集合的Stream3
+                                        .map(ClassB::getId) //将第二个集合每个元素的id属性取出来，映射成新的一个Stream4
+                                        .anyMatch( //返回值（boolean）：Stream4中是否至少有一个元素使lambda表达式2返回值为true
+                                                id -> //lambda表达式2，id为lambda表达式2的参数，是Stream4中的每个元素
+                                                        Objects.equals(a.getId(), id) //判断id的值是否相等
+                                        )
+                )
+                .collect(Collectors.toList()); //将Stream2转换为List
+        System.out.println(intersectA);
+
+    }
+
+
+
+
 }

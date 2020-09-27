@@ -1,6 +1,7 @@
 package com.bvgol.time;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -17,8 +18,16 @@ public class TimeDemo {
     public static void main(String[] args) {
 //        String s = TimeDemo.transferLongToDate("yyyy-mm-dd hh:mm:ss", 1594013518000L);
 //        System.out.println("s = " + s);
-        dateGetYear();
+//        dateGetYear();
+
+        String s = LocalDate.now().toString();
+        System.out.println("s = " + s);
+        s =s.replaceAll("-","");
+        String substring = s.substring(0, 6);
+        System.out.println("substring = " + substring);
     }
+
+
 
     public static void dateGetYear(){
         System.out.println(String.valueOf(Calendar.getInstance().get(Calendar.YEAR)));
