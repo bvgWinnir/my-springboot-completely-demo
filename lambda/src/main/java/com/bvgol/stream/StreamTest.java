@@ -4,7 +4,9 @@ import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Data
 public class StreamTest {
@@ -33,7 +35,7 @@ public class StreamTest {
 
         List<StreamTest> list = new ArrayList<>();
 
-        StreamTest object = new StreamTest(1, 25, "尚佳鹏");
+        StreamTest object0 = new StreamTest(1, 25, "尚佳鹏");
 
         StreamTest object1 = new StreamTest(2, 24, "标哥");
 
@@ -41,7 +43,7 @@ public class StreamTest {
 
         StreamTest object3 = new StreamTest(4, 18, "姚孟");
 
-        list.add(object);
+        list.add(object0);
 
         list.add(object1);
 
@@ -61,6 +63,14 @@ public class StreamTest {
 
         System.err.println("已去重的年龄 : " + agess);
 
+        List<Integer> collect = list.stream().map(StreamTest::getId).filter(id -> id > 2).collect(Collectors.toList());
+
+        Integer reduce = list.stream().map(StreamTest::getId).reduce(0, (a, b) -> a + b);
+
+        List<Integer> collect1 = list.stream().map(StreamTest::getId).flatMap(Stream::of).collect(Collectors.toList());
     }
+
+
+
 
 }
