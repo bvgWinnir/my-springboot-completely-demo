@@ -7,6 +7,7 @@ package com.bvgol.springbootjapiDocs.result;
  * @Description:
  * @date 2020/6/289:59
  */
+
 import java.util.List;
 
 public class PageResult<T> {

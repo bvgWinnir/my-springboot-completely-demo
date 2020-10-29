@@ -3,7 +3,7 @@ package com.bvgol.springbootjapiDocs.vo;
 /**
  * @author yeguozhong yedaxia.github.com
  */
-public class AdminVO extends SimpleUser{
+public class AdminVO extends SimpleUser {
 
     private String password; //密码
 

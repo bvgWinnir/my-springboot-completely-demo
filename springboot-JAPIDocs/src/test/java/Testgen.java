@@ -2,11 +2,10 @@ import io.github.yedaxia.apidocs.Docs;
 import io.github.yedaxia.apidocs.DocsConfig;
 import org.junit.Test;
 
-
 public class Testgen {
 
     @Test
-    public void test_gDocs(){
+    public void test_gDocs() {
         DocsConfig docsConfig = new DocsConfig();
         docsConfig.setProjectPath("D:\\idea_projects\\my-springboot-completely-demo\\springboot-JAPIDocs\\src\\main\\java\\com");
 

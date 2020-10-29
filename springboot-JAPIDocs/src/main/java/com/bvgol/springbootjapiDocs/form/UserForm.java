@@ -12,9 +12,9 @@ import javax.validation.constraints.NotNull;
  * @Description:
  * @date 2020/6/289:59
  */
-public class UserForm{
+public class UserForm {
     /**
-     *  用户ID
+     * 用户ID
      */
     private Long id;
     @NotBlank
