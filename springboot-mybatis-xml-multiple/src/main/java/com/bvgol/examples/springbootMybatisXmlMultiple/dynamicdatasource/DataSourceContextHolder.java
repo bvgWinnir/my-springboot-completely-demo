@@ -1,7 +1,6 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource;
 
 /**
- * 
  * @author luoping
  */
 public class DataSourceContextHolder {

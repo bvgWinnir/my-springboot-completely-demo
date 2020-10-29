@@ -34,7 +34,6 @@
         </rollingPolicy>
     </appender>
 
-
     <appender name="fileErrorLog" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>${logPath}/error.log</File>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">

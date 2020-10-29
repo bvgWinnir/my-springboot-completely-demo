@@ -3,6 +3,7 @@ package com.bvgol.examples.springbootMybatisXmlMultiple.aop;
 import com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource.DynamicDataSource;
 import com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource.DynamicDataSourceEnum;
 import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +22,6 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 
-
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
@@ -31,7 +31,6 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @Created by guochen
  */
 @Slf4j
-
 
 /**
  * 主从配置

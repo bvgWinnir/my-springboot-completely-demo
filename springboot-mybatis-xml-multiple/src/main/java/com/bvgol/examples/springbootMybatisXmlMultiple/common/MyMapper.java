@@ -1,17 +1,14 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.common;
 
-import lombok.extern.slf4j.Slf4j;
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;
+
 /**
  * @Classname MyMapper
  * @Description TODO
  * @Date 2020/6/4 13:45
  * @Created by guochen
  */
-@Slf4j
-
-
 
 /**
  * @author kevin
