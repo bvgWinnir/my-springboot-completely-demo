@@ -33,7 +33,14 @@
         <module>springboot-logback</module>
         <module>springboot-exception</module>
         <module>springboot-mybatis-plus-diboot</module>
-        <module>springboot-examples-model</module>
+        <module>lambda</module>
+        <module>springboot-easyExcel</module>
+        <module>springboot-druid</module>
+        <module>springboot-dataway</module>
+        <module>springboot-activiti</module>
+        <module>springboot-devtools</module>
+        <module>springboot-Flowable</module>
+        <module>maven-flowable</module>
 
     </modules>
 
