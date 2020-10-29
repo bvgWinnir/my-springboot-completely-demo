@@ -12,10 +12,12 @@ import javax.annotation.Resource;
 import java.time.LocalDate;
 import java.util.Date;
 
+import com.bvgol.examples.springbootredis.com.utils.RedisUtil;
+
 @SpringBootTest
 class SpringbootRedisApplicationTests {
     @Resource
-    private RedisUtil redisUtil ;
+    private RedisUtil redisUtil;
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;
@@ -24,44 +26,36 @@ class SpringbootRedisApplicationTests {
 //    private StringRedisTemplate stringRedisTemplate;
     //没有注入
 
-
-
-
-    JSONObject initJson(){
+    JSONObject initJson() {
         JSONObject json = new JSONObject();
-        json.put("id", IdUtil.createSnowflake(1L,1L).nextId());
-        json.put("name","name"+ LocalDate.now());
-        json.put("bri",new Date());
+        json.put("id", IdUtil.createSnowflake(1L, 1L).nextId());
+        json.put("name", "name" + LocalDate.now());
+        json.put("bri", new Date());
         return json;
     }
-
-
 
     @Test
     void contextLoads() {
 
-
     }
 
     @Test
-    void RedisUtilsetJson(){
-        redisUtil.set("json"+LocalDate.now(),initJson());
+    void RedisUtilsetJson() {
+        redisUtil.set("json" + LocalDate.now(), initJson());
     }
 
     @Test
-    void RedisUtilsetString(){
-        redisUtil.set("xxxxx","xxxx2020年5月3日09:00:26");
-        String xxxxx = (String)redisUtil.get("xxxxx");
+    void RedisUtilsetString() {
+        redisUtil.set("xxxxx", "xxxx2020年5月3日09:00:26");
+        String xxxxx = (String) redisUtil.get("xxxxx");
         System.out.println(xxxxx);
     }
 
     @Test
-    void RedisTemplatesetString(){
-        redisTemplate.opsForValue().set("yyy","xxxx2020年5月3日09:00:26");
-        String xxxxx = (String)redisUtil.get("yyy");
+    void RedisTemplatesetString() {
+        redisTemplate.opsForValue().set("yyy", "xxxx2020年5月3日09:00:26");
+        String xxxxx = (String) redisUtil.get("yyy");
         System.out.println(xxxxx);
     }
-
-
 
 }
