@@ -20,7 +20,7 @@ public class Test1vs {
     private SysUserRoleDao sysUserRoleDao;
 
     @Test
-   public void onevs4(){
+    public void onevs4() {
         SysUserRole sysUserRole = sysUserRoleDao.queryById(1L);
         System.out.println("sysUserRole = " + sysUserRole);
     }

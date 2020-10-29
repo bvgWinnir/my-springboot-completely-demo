@@ -10,25 +10,24 @@ import java.io.Serializable;
  */
 public class SysConfig implements Serializable {
     private static final long serialVersionUID = -36389119048929539L;
-    
+
     private Long id;
     /**
-    * key
-    */
+     * key
+     */
     private String paramKey;
     /**
-    * value
-    */
+     * value
+     */
     private String paramValue;
     /**
-    * 状态   0：隐藏   1：显示
-    */
+     * 状态   0：隐藏   1：显示
+     */
     private Object status;
     /**
-    * 备注
-    */
+     * 备注
+     */
     private String remark;
-
 
     public Long getId() {
         return id;

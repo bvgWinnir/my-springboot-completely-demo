@@ -1,6 +1,5 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.dao;
 
-
 import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
 import com.bvgol.examples.springbootmybatisxmlannotion.service.SysRoleDeptService;
 import lombok.extern.slf4j.Slf4j;
@@ -42,8 +41,5 @@ public class SysRoleDeptDaoTestPage {
         Assert.assertEquals(5, sysRoleDepts.size());
         sysRoleDepts.forEach(System.out::println);
     }
-
-
-
 
 }

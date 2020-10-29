@@ -65,10 +65,10 @@ public class SysRoleDeptServiceImpl implements SysRoleDeptService {
     @Override
     @Transactional
     public Integer updateE(SysRoleDept sysRoleDept) throws RuntimeException {
-        int update =0;
+        int update = 0;
         try {
-             update = this.sysRoleDeptDao.update(sysRoleDept);
-            int a = 1/0;
+            update = this.sysRoleDeptDao.update(sysRoleDept);
+            int a = 1 / 0;
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("");
@@ -76,13 +76,14 @@ public class SysRoleDeptServiceImpl implements SysRoleDeptService {
         return update;
 
     }
+
     @Override
     @Transactional
     public Integer updateNotthrow(SysRoleDept sysRoleDept) throws Exception {
-        int update =0;
+        int update = 0;
         try {
             update = this.sysRoleDeptDao.update(sysRoleDept);
-            int a = 1/0;
+            int a = 1 / 0;
         } catch (Exception e) {
             e.printStackTrace();
 //            throw new RuntimeException("");

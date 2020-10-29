@@ -1,6 +1,5 @@
 package com.bvgol.examples.springbootmybatisxmlannotion.dao;
 
-
 import cn.hutool.core.util.IdUtil;
 import com.bvgol.examples.springbootmybatisxmlannotion.entity.SysRoleDept;
 import lombok.extern.slf4j.Slf4j;
@@ -33,10 +32,10 @@ public class SysRoleDeptDaoTestCascade {
     }
 
     @Test
-    void testInsertReturn(){
+    void testInsertReturn() {
 
         SysRoleDept sysRoleDept = new SysRoleDept();
-        sysRoleDept.setId(IdUtil.getSnowflake(1L,1L).nextId());
+        sysRoleDept.setId(IdUtil.getSnowflake(1L, 1L).nextId());
         sysRoleDept.setRoleId(0L);
         sysRoleDept.setDeptId(0L);
 
@@ -45,26 +44,21 @@ public class SysRoleDeptDaoTestCascade {
     }
 
     @Test
-    //mysql 列经过类型转换 之后 的处理
-    void testRestulMap(){
-        Map<String , Object> count = sysRoleDeptDao.findCount();
+        //mysql 列经过类型转换 之后 的处理
+    void testRestulMap() {
+        Map<String, Object> count = sysRoleDeptDao.findCount();
 
-        BigDecimal id = (BigDecimal)count.get("id");
-        Long id_count = (Long)count.get("id_count");
+        BigDecimal id = (BigDecimal) count.get("id");
+        Long id_count = (Long) count.get("id_count");
 
         System.out.println("id = " + id);
         System.out.println("id_count = " + id_count);
 
-
     }
 
     @Test
-    void testNoJdbcTyep(){
+    void testNoJdbcTyep() {
 
     }
-
-
-
-
 
 }

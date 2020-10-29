@@ -11,17 +11,16 @@ import java.util.Date;
  */
 public class SysOss implements Serializable {
     private static final long serialVersionUID = 136063433207516074L;
-    
+
     private Long id;
     /**
-    * URL地址
-    */
+     * URL地址
+     */
     private String url;
     /**
-    * 创建时间
-    */
+     * 创建时间
+     */
     private Date createDate;
-
 
     public Long getId() {
         return id;
