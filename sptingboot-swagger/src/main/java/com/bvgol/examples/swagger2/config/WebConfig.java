@@ -7,9 +7,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
- 
+
     /**
-     *  配置swagger静态资源
+     * 配置swagger静态资源
+     *
      * @param registry
      */
     @Override
@@ -17,9 +18,10 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addResourceHandler("static/**").addResourceLocations("/static/");
         registry.addResourceHandler("swagger-ui.html").addResourceLocations("classpath:/META-INF/resources/");
     }
- 
+
     /**
      * 跨域支持配置
+     *
      * @param registry
      */
     @Override

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Api(description = "spring boot swagger demo22222",
-        value="api -value",
+        value = "api -value",
         produces = "produces",
         consumes = "consumes",
         protocols = "protocols"
@@ -38,10 +38,10 @@ public class SwaggerDemoController2 {
         return testEntity;
     }
 
-     @RequestMapping("/list22")
-    public String listTest2(@ApiParam(name = "name",value = "value",allowableValues = "test2",
-             example = "小王",
-             required = true) String name) {
+    @RequestMapping("/list22")
+    public String listTest2(@ApiParam(name = "name", value = "value", allowableValues = "test2",
+            example = "小王",
+            required = true) String name) {
         return name + ", hello";
     }
 

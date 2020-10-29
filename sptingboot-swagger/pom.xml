@@ -11,8 +11,8 @@
 
     <artifactId>sptingboot-swagger</artifactId>
 
-
     <dependencies>
+<!--  springboot 最小依赖 开始     -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -25,6 +25,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+
+<!--    springboot 最小依赖 结束     -->
         <!-- Swagger API文档 -->
         <dependency>
             <groupId>io.springfox</groupId>

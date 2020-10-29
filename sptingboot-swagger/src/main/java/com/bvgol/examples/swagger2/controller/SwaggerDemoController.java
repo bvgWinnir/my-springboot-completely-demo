@@ -12,18 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(description = "why work to controller ")
 @RequestMapping("/swagger/dome")
 public class SwaggerDemoController {
- 
+
     @ResponseBody
-    @ApiOperation(value = "swagger2示例接口描述",httpMethod = "POST",
+    @ApiOperation(value = "swagger2示例接口描述", httpMethod = "POST",
             notes = "这里是notes信息", response = TestEntity.class)
     @RequestMapping("/list")
     public TestEntity listTest(TestEntity testEntity) {
         return testEntity;
     }
-    
-     @RequestMapping("/list2")
+
+    @RequestMapping("/list2")
     public String listTest2(@ApiParam(name = "name", value = "value",
-            allowableValues = "test2",example = "小王", required = true) String name) {
+            allowableValues = "test2", example = "小王", required = true) String name) {
         return name + ", hello";
     }
 

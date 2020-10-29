@@ -1,6 +1,5 @@
 package com.bvgol.examples.swagger2;
 
-
 import io.swagger.annotations.SwaggerDefinition;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SwaggerDefinition
 @SpringBootApplication
 public class Swagger2Application {
-        public static void main(String[] args) {
-            SpringApplication.run(Swagger2Application.class, args);
-        }
+    public static void main(String[] args) {
+        SpringApplication.run(Swagger2Application.class, args);
+    }
 }
