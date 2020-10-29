@@ -38,4 +38,11 @@ public class HBookDaoTest {
         }
     }
 
+//    @Test
+//    public void selectSimplyByPage (){
+//        PageRequest request = new PageRequest(0, 1, new Sort(Sort.Direction.DESC, "created"));
+//
+//        hBookDao.findHbooksBy(request);
+//    }
+
 }

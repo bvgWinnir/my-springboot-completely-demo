@@ -8,13 +8,13 @@ import javax.persistence.*;
  */
 @Data
 @Entity   //注释它为实体类
-@Table(name = "t_springboot_hbook") //设置要生成的表名
+@Table(name = "t_springboot_hbook" ) //设置要生成的表名
 public class Hbook {
     @Id
     @GeneratedValue
     private Integer bid;
     @Column(length = 100) //创建这个列值得长度
     private String bname;
-    @Column
+    @Column(columnDefinition="columnDefinition")
     private Float price;
 }
