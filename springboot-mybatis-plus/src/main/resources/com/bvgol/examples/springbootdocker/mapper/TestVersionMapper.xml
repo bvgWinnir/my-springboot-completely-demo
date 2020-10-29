@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bvgol.examples.springbootmybatisplus.mapper.TestVersionMapper">
+  <resultMap id="BaseResultMap" type="com.bvgol.examples.springbootmybatisplus.model.TestVersion">
+    <!--@mbg.generated-->
+    <!--@Table testVersion-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `name`, version, create_time
+  </sql>
+</mapper>

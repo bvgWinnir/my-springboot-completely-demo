@@ -51,5 +51,5 @@ public class SampleServcieInsertTest {
          userService.save(u);
     }
 
-
+//		boolean update = this.update(new LambdaQueryChainWrapper<CenterOrderSalesMain>(baseMapper).select(CenterOrderSalesMain::getId, CenterOrderSalesMain::getStatus));
 }

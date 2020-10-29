@@ -93,4 +93,10 @@ public class SampleMapperTest {
 
         int i = userMapper.deleteById(902);
     }
+
+
+    @Test
+    public void versionTest(){
+
+    }
 }

@@ -33,12 +33,5 @@ public class MybatisPlusConfig {
     public OptimisticLockerInterceptor optimisticLockerInterceptor() {
         return new OptimisticLockerInterceptor();
     }
-//    @Bean
-//    public ISqlInjector sqlInjector(){
-//        return new LogicSqlInjector();
-//    }
-
-    //
-    //配置MetaObjectHandler
 
 }

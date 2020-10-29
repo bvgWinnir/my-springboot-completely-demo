@@ -22,7 +22,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         /* 上面选其一使用,下面的已过时(注意 strictInsertFill 有多个方法,详细查看源码) */
         //this.setFieldValByName("operator", "Jerry", metaObject);
         //this.setInsertFieldValByName("operator", "Jerry", metaObject);
-        this.strictInsertFill(metaObject,"version",Integer.class,1);
+//        this.strictInsertFill(metaObject,"version",Integer.class,1);
         this.strictInsertFill(metaObject,"deleted",Integer.class,0);
     }
 
