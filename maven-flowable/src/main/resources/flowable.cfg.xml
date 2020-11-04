@@ -1,0 +1,20 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="processEngineConfiguration" class="org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+
+        <property name="jdbcUrl" value="jdbc:mysql://47.94.43.15:3306/flowable?characterEncoding=UTF-8"/>
+        <property name="jdbcDriver" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUsername" value="root"/>
+        <property name="jdbcPassword" value="root"/>
+
+        <property name="databaseSchemaUpdate" value="true"/>
+
+        <property name="asyncExecutorActivate" value="false"/>
+
+        <property name="mailServerHost" value="mail.my-corp.com"/>
+        <property name="mailServerPort" value="5025"/>
+    </bean>
+
+</beans>

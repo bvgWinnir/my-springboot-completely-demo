@@ -1,4 +1,4 @@
-package org.flowable;
+package org.flowable.demo1;
 
 import org.flowable.engine.delegate.DelegateExecution;
 import org.flowable.engine.delegate.JavaDelegate;

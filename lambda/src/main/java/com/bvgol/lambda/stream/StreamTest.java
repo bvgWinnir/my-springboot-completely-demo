@@ -1,10 +1,10 @@
-package com.bvgol.stream;
+package com.bvgol.lambda.stream;
 
 import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.BinaryOperator;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -61,16 +61,18 @@ public class StreamTest {
 
         List<Integer> agess = list.stream().map(StreamTest::getAge).distinct().collect(Collectors.toList());
 
-        System.err.println("已去重的年龄 : " + agess);
+        System.out.println("已去重的年龄 : " + agess);
 
         List<Integer> collect = list.stream().map(StreamTest::getId).filter(id -> id > 2).collect(Collectors.toList());
-
+        collect.forEach(System.out::println);
         Integer reduce = list.stream().map(StreamTest::getId).reduce(0, (a, b) -> a + b);
+        System.out.println("reduce = " + reduce);
+        Optional<Integer> reduce1 = list.stream().map(StreamTest::getId).reduce(Integer::sum);
+        Integer integer = reduce1.get();
+        System.out.println("integer = " + integer);
 
         List<Integer> collect1 = list.stream().map(StreamTest::getId).flatMap(Stream::of).collect(Collectors.toList());
+        collect1.forEach(System.out::println);
     }
-
-
-
 
 }

@@ -1,0 +1,40 @@
+<definitions id="definitions"
+             targetNamespace="http://flowable.org/bpmn20"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+    <BPMNDiagram xmlns="http://www.omg.org/spec/BPMN/20100524/DI">
+        <BPMNPlane>
+            <BPMNEdge/>
+        </BPMNPlane>
+    </BPMNDiagram>
+
+    <!--    用例很简单：有一个公司，叫做BPMCorp。在BPMCorp中，由会计部门负责，每月需要为投资人撰写一份报告。在报告完成后，需要高层经理中的一人进行审核，然后才能发
+    给所有投资人-->
+    <process id="financialReport" name="Monthly financial report reminder process">
+        <startEvent id="theStart"/>
+        <sequenceFlow id="flow1" sourceRef="theStart" targetRef="writeReportTask"/>
+        <userTask id="writeReportTask" name="Write monthly financial report">
+            <documentation>
+                Write monthly financial report for publication to shareholders.
+            </documentation>
+            <potentialOwner>
+                <resourceAssignmentExpression>
+                    <formalExpression>accountancy</formalExpression>
+                </resourceAssignmentExpression>
+            </potentialOwner>
+        </userTask>
+        <sequenceFlow id="flow2" sourceRef="writeReportTask" targetRef="verifyReportTask"/>
+        <userTask id="verifyReportTask" name="Verify monthly financial report">
+            <documentation>
+                Verify monthly financial report composed by the accountancy department.
+                This financial report is going to be sent to all the company shareholders.
+            </documentation>
+            <potentialOwner>
+                <resourceAssignmentExpression>
+                    <formalExpression>management</formalExpression>
+                </resourceAssignmentExpression>
+            </potentialOwner>
+        </userTask>
+        <sequenceFlow id="flow3" sourceRef="verifyReportTask" targetRef="theEnd"/>
+        <endEvent id="theEnd"/>
+    </process>
+</definitions>

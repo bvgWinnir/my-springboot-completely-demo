@@ -1,4 +1,4 @@
-package org.flowable;/**
+package org.flowable.demo1;/**
  * @Classname EventListen
  * @Description TODO
  * @Date 2020/10/29 16:28
@@ -47,3 +47,14 @@ public class MyEventListener implements FlowableEventListener {
         return null;
     }
 }
+
+//这段配置放哪儿?
+//<bean id="processEngineConfiguration"
+//class="org.flowable.engine.impl.cfg.StandaloneProcessEngineConfiguration">
+//        ...
+//<property name="eventListeners">
+//<list>
+//<bean class="org.flowable.engine.example.MyEventListener" />
+//</list>
+//</property>
+//</bean>

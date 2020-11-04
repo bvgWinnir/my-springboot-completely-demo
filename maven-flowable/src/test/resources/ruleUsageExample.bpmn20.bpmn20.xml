@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+             typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+             targetNamespace="http://www.flowable.org/processdef">
+    <process id="ruleUsageExample.bpmn20" name="ruleUsageExample.bpmn20" isExecutable="true">
+        <startEvent id="StartEvent_1" name="Start Event 1"/>
+    </process>
+    <bpmndi:BPMNDiagram id="BPMNDiagram_ruleUsageExample.bpmn20">
+        <bpmndi:BPMNPlane bpmnElement="ruleUsageExample.bpmn20" id="BPMNPlane_ruleUsageExample.bpmn20">
+            <bpmndi:BPMNShape bpmnElement="StartEvent_1">
+                <omgdc:Bounds height="48.0" width="48.0" x="120.0" y="186.0"/>
+            </bpmndi:BPMNShape>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</definitions>
