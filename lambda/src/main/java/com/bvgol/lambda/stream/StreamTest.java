@@ -17,9 +17,7 @@ public class StreamTest {
 
     private String name;
 
-    public StreamTest() {
 
-    }
 
     public StreamTest(Integer id, Integer age, String name) {
 
@@ -73,6 +71,7 @@ public class StreamTest {
 
         List<Integer> collect1 = list.stream().map(StreamTest::getId).flatMap(Stream::of).collect(Collectors.toList());
         collect1.forEach(System.out::println);
+
     }
 
 }
