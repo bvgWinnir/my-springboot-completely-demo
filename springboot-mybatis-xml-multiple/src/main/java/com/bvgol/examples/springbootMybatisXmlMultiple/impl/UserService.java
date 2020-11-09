@@ -1,13 +1,13 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.impl;
 
-import java.util.List;
-
 import com.bvgol.examples.springbootMybatisXmlMultiple.domain.User;
 import com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource.DataSourceSelector;
 import com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource.DynamicDataSourceEnum;
 import com.bvgol.examples.springbootMybatisXmlMultiple.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author kevin

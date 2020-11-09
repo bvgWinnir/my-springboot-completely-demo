@@ -1,12 +1,9 @@
 package com.bvgol.examples.springbootmybatisplus.service;
 
-import org.springframework.stereotype.Service;
-import javax.annotation.Resource;
-import java.util.List;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bvgol.examples.springbootmybatisplus.mapper.TestVersionMapper;
 import com.bvgol.examples.springbootmybatisplus.model.TestVersion;
-import com.bvgol.examples.springbootmybatisplus.service.TestVersionService;
+import org.springframework.stereotype.Service;
 /**
  * @Classname TestVersionServiceImpl
  * @Description TODO

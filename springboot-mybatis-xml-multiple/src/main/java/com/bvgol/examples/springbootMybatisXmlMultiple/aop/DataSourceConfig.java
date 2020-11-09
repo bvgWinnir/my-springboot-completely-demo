@@ -1,14 +1,9 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.aop;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource.DynamicDataSource;
 import com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource.DynamicDataSourceEnum;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.sql.DataSource;
-
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -19,10 +14,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-
-import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
-
 import tk.mybatis.spring.annotation.MapperScan;
+
+import javax.sql.DataSource;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Classname DataSourceConfig

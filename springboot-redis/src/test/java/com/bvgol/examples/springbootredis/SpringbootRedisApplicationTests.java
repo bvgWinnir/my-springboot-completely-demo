@@ -12,8 +12,6 @@ import javax.annotation.Resource;
 import java.time.LocalDate;
 import java.util.Date;
 
-import com.bvgol.examples.springbootredis.com.utils.RedisUtil;
-
 @SpringBootTest
 class SpringbootRedisApplicationTests {
     @Resource

@@ -1,7 +1,6 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.dynamicdatasource;
 
-import java.lang.reflect.Method;
-
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -10,7 +9,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import lombok.extern.slf4j.Slf4j;
+import java.lang.reflect.Method;
 
 /**
  * @author luoping

@@ -1,7 +1,7 @@
 package com.bvgol.examples.springbootmybatisplus.service;
 
-import com.bvgol.examples.springbootmybatisplus.model.TestVersion;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.bvgol.examples.springbootmybatisplus.model.TestVersion;
     /**
  * @Classname TestVersionService
  * @Description TODO

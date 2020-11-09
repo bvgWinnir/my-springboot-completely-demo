@@ -1,5 +1,7 @@
 package com.bvgol.examples.springbootjpa.pojo;
+
 import lombok.Data;
+
 import javax.persistence.*;
 /**
  * @author 黄大娘

@@ -1,7 +1,6 @@
 package com.bvgol.examples.springbootdocker.service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-
 import com.bvgol.examples.springbootdocker.mapper.UserMapper;
 import com.bvgol.examples.springbootdocker.model.User;
 import lombok.extern.slf4j.Slf4j;

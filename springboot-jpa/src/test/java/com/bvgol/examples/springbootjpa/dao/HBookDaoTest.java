@@ -1,7 +1,6 @@
 package com.bvgol.examples.springbootjpa.dao;
 
 import com.bvgol.examples.springbootjpa.pojo.Hbook;
-import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

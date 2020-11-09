@@ -3,12 +3,10 @@ package com.bvgol.springbootjapiDocs.controller;
 import com.bvgol.springbootjapiDocs.form.UserForm;
 import com.bvgol.springbootjapiDocs.form.UserListForm;
 import com.bvgol.springbootjapiDocs.result.ApiResult;
-
 import com.bvgol.springbootjapiDocs.result.PageResult;
 import com.bvgol.springbootjapiDocs.vo.UserVO;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**

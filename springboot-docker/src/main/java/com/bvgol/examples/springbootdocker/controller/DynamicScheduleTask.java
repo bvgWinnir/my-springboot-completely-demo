@@ -1,14 +1,10 @@
 package com.bvgol.examples.springbootdocker.controller;
-import java.util.Date;
 
-import com.bvgol.examples.springbootdocker.mapper.CronMapper;
 import com.bvgol.examples.springbootdocker.model.Cron;
 import com.bvgol.examples.springbootdocker.model.User;
 import com.bvgol.examples.springbootdocker.service.CronService;
 import com.bvgol.examples.springbootdocker.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -19,6 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;

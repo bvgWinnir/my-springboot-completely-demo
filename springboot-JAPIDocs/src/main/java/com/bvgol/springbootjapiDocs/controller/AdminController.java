@@ -2,7 +2,6 @@ package com.bvgol.springbootjapiDocs.controller;
 
 import com.bvgol.springbootjapiDocs.form.AdminForm;
 import com.bvgol.springbootjapiDocs.vo.AdminVO;
-
 import io.github.yedaxia.apidocs.ApiDoc;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

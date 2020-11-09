@@ -1,19 +1,13 @@
-import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.ExcelReader;
-import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.event.AnalysisEventListener;
 import com.alibaba.excel.metadata.Sheet;
-import com.alibaba.excel.metadata.Table;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.bvgol.springboot.easyexcel.listener.ExcelListener;
-import com.bvgol.springboot.easyexcel.pojo.ExcelPropertyIndexModel;
 import com.bvgol.springboot.easyexcel.pojo.LoanInfo;
-import com.bvgol.springboot.easyexcel.pojo.MultiLineHeadExcelModel;
 import org.junit.Test;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.IOException;
+import java.io.InputStream;
 
 import static org.apache.commons.codec.Resources.getInputStream;
 

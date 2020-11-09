@@ -1,13 +1,12 @@
 package com.bvgol.examples.springbootredis;
 
 //import com.bvgol.examples.springbootredis.com.utils.RedisUtil;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
-
-import javax.annotation.Resource;
 
 /**
  * @author guochen

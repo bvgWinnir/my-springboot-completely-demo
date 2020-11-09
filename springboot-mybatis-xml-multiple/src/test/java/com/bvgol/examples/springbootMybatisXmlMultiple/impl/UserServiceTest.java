@@ -1,7 +1,5 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.impl;
 
-import java.util.List;
-
 import com.bvgol.examples.springbootMybatisXmlMultiple.domain.User;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -9,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
 
 /**
  * @author kevin

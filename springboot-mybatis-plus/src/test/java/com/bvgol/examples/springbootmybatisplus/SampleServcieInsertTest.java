@@ -1,22 +1,15 @@
 package com.bvgol.examples.springbootmybatisplus;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.Date;
 
-
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.bvgol.examples.springbootmybatisplus.model.User;
 import com.bvgol.examples.springbootmybatisplus.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
+import java.time.LocalDateTime;
 
 /**
  * @Classname SampleMapperTest

@@ -1,13 +1,5 @@
 package com.bvgol.examples.springbootargs.vo;
 
-import com.bvgol.examples.springbootargs.dto.TestDemoDTO;
-import com.bvgol.examples.springbootargs.pojo.Demo;
-
-import org.springframework.beans.BeanUtils;
-
-import java.util.Date;
-import java.util.HashMap;
-
 public class TestDemo {
     public static void main(String[] args) {
 //        TestDemoFrom testDemoFrom = new TestDemoFrom();

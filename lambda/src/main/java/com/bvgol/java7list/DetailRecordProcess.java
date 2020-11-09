@@ -3,10 +3,8 @@ package com.bvgol.java7list;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * @Classname DetailRecordProcess

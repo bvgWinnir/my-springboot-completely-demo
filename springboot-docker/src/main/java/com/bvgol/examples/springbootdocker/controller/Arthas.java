@@ -1,9 +1,10 @@
 package com.bvgol.examples.springbootdocker.controller;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashSet;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * <p>

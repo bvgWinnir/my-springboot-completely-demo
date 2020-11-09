@@ -1,13 +1,12 @@
 package com.bvgol.examples.springbootMybatisXmlMultiple.domain;
 
-import java.util.Date;
+import lombok.Data;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import lombok.Data;
+import java.util.Date;
 
 /**
  * @author kevin
