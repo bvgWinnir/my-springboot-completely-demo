@@ -21,7 +21,7 @@ public class SwaggerDemoController2 {
 
     @ResponseBody
     @ApiOperation(
-            value = "swagger2示例接口描述",
+            value = "swagger2示例接口描述2",
             notes = "这里是notes信息",
 //            tags = "tag1",
             response = TestEntity.class,

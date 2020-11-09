@@ -1,4 +1,4 @@
-package com.bvgol.list;
+package com.bvgol.lambda.stream;
 
 class ClassA {
     String id;

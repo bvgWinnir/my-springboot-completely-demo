@@ -1,8 +1,8 @@
 package com.bvgol.java7list;
 
+import com.bvgol.lambda.stream.User;
 import com.bvgol.list.MyJson;
 import com.bvgol.list.MyList;
-import com.bvgol.list.User;
 
 import java.util.*;
 

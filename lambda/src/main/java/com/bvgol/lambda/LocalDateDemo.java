@@ -1,4 +1,4 @@
-package com.bvgol.list;
+package com.bvgol.lambda;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

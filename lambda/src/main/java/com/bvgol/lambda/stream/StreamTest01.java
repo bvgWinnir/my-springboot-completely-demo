@@ -1,4 +1,7 @@
-package com.bvgol.list;
+package com.bvgol.lambda.stream;
+
+import com.bvgol.list.MyJson;
+import com.bvgol.list.MyList;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -10,7 +13,7 @@ import java.util.stream.Collectors;
  * @Description:
  * @date 2020/6/2916:28
  */
-public class StreamTest {
+public class StreamTest01 {
 
     public static void main(String[] args) {
         List<User> users = MyList.initUserList();

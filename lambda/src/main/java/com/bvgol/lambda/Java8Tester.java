@@ -1,12 +1,7 @@
-package com.bvgol.list;
+package com.bvgol.lambda;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
-import java.util.Map;
 
 public class Java8Tester {
     public static void main(String args[]) {
