@@ -6,11 +6,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author guochen
- * @Title: UserForm
- * @Package
- * @Description:
- * @date 2020/6/289:59
+ * @author yeguozhong yedaxia.github.com
  */
 public class UserForm {
     /**

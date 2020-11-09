@@ -1,5 +1,8 @@
 package com.bvgol.springbootjapiDocs.form;
 
+/**
+ * @author yeguozhong yedaxia.github.com
+ */
 public class AdminForm {
 
     private String name; //名字

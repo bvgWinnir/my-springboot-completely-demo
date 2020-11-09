@@ -1,12 +1,13 @@
-package com.bvgol.springbootjapiDocs.controller;
+package com.bvgol.springbootjapiDocs.controller.admin;
 
 import com.bvgol.springbootjapiDocs.form.AdminForm;
-import com.bvgol.springbootjapiDocs.vo.AdminVO;
+import com.bvgol.springbootjapiDocs.result.user.AdminVO;
 import io.github.yedaxia.apidocs.ApiDoc;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 演示一些比较特殊的声明方法
@@ -38,7 +39,7 @@ public class AdminController {
     @RequestMapping(path = "/api/v1/admin/emailLogin", method = RequestMethod.POST)
     @ApiDoc(AdminVO.class)
     @Deprecated
-    public void emailLogin(@RequestParam String email, String password) {
+    public void emailLogin(@RequestParam(name = "email", required = true) String email, String password) {
 
     }
 
@@ -62,5 +63,16 @@ public class AdminController {
     @ApiDoc(AdminVO[].class)
     public void addAdmins(@RequestBody List<AdminForm> adminForms) {
 
+    }
+
+    /**
+     * 测试map
+     *
+     * @return
+     */
+    @ApiDoc
+    @RequestMapping("test-map")
+    public Map<String, Object> testMap() {
+        return null;
     }
 }

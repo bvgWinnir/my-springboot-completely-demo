@@ -3,12 +3,14 @@ package com.bvgol.springbootjapiDocs.controller;
 import com.bvgol.springbootjapiDocs.form.PageForm;
 import com.bvgol.springbootjapiDocs.result.ApiResult;
 import com.bvgol.springbootjapiDocs.result.PageResult;
-import com.bvgol.springbootjapiDocs.vo.BookDetailVO;
-import com.bvgol.springbootjapiDocs.vo.BookVO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.bvgol.springbootjapiDocs.result.book.BookDetailVO;
+import com.bvgol.springbootjapiDocs.result.book.BookVO;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.constraints.NotNull;
+import java.util.List;
 
 /**
  * 图书接口
@@ -48,7 +50,29 @@ public class BookController {
      * @return
      */
     @GetMapping("del-book")
-    public ApiResult<BookVO> delBook(@RequestParam Long bookId) {
+    public ApiResult<BookVO> delBook(@NotNull Long bookId) {
+        return null;
+    }
+
+    /**
+     * 批量删除图书
+     *
+     * @param bookIds
+     * @return
+     */
+    @DeleteMapping("del-books")
+    public ApiResult deleteBooks(List<Long> bookIds) {
+        return null;
+    }
+
+    /**
+     * 购买图书
+     *
+     * @param bookId
+     * @return
+     */
+    @PostMapping("buy-book")
+    public ResponseEntity<HttpEntity<BookVO>> buyBook(Long bookId) {
         return null;
     }
 }

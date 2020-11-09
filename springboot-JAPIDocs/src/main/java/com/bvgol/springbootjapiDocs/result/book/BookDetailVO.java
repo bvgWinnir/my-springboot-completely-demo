@@ -1,5 +1,6 @@
-package com.bvgol.springbootjapiDocs.vo;
+package com.bvgol.springbootjapiDocs.result.book;
 
+import com.bvgol.springbootjapiDocs.result.user.UserVO;
 
 /**
  * @author yeguozhong yedaxia.github.com

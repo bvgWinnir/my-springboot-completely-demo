@@ -1,4 +1,4 @@
-package com.bvgol.springbootjapiDocs.result;
+package com.bvgol.springbootjapiDocs.result.user;
 
 import java.util.List;
 

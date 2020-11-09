@@ -1,5 +1,6 @@
-package com.bvgol.springbootjapiDocs.vo;
+package com.bvgol.springbootjapiDocs.result.user;
 
+import com.bvgol.springbootjapiDocs.result.book.BookVO;
 import io.github.yedaxia.apidocs.RapMock;
 
 import java.util.List;
@@ -15,6 +16,8 @@ public class UserVO extends SimpleUser {
     private List<BookVO> readBooks; //阅读图书
 
     private Boolean isFollow; //是否关注
+
+    private List<UserVO> follower;
 
     public SimpleUser[] getFriends() {
         return friends;

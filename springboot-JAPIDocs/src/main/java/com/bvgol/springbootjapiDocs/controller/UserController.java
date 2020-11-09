@@ -1,17 +1,25 @@
 package com.bvgol.springbootjapiDocs.controller;
 
+import com.bvgol.springbootjapiDocs.enums.UserType;
+import com.bvgol.springbootjapiDocs.form.GenericForm;
+import com.bvgol.springbootjapiDocs.form.PageForm;
 import com.bvgol.springbootjapiDocs.form.UserForm;
 import com.bvgol.springbootjapiDocs.form.UserListForm;
 import com.bvgol.springbootjapiDocs.result.ApiResult;
 import com.bvgol.springbootjapiDocs.result.PageResult;
-import com.bvgol.springbootjapiDocs.vo.UserVO;
+import com.bvgol.springbootjapiDocs.result.user.UserVO;
+import io.github.yedaxia.apidocs.ApiDoc;
+import io.github.yedaxia.apidocs.Ignore;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 用户接口
- *
  * @author yeguozhong
  */
 @RequestMapping("/api/user/")
@@ -22,6 +30,7 @@ public class UserController {
      * 用户列表
      *
      * @param listForm
+     * @description 这是一行说明
      * @author yedaxia
      */
     @RequestMapping(path = "list", method = {RequestMethod.GET, RequestMethod.POST})
@@ -32,11 +41,12 @@ public class UserController {
     /**
      * 用户信息
      *
-     * @param userId 用户id
+     * @param userId   用户id
+     * @param userForm
      * @author 周杰伦
      */
     @GetMapping("user-info/{userId}")
-    public ApiResult<UserVO> userInfo(@PathVariable Long userId) {
+    public ApiResult<UserVO> userInfo(@PathVariable Long userId, @RequestBody UserForm userForm) {
         return null;
     }
 
@@ -45,10 +55,33 @@ public class UserController {
      *
      * @param req
      * @param userForm
+     * @param session
      * @return
      */
     @PostMapping(path = "save")
-    public ApiResult<UserVO> saveUser(HttpServletResponse req, @RequestBody UserForm userForm) {
+    public ApiResult<UserVO> saveUser(HttpServletResponse req, @RequestBody UserForm userForm, HttpSession session) {
+        return null;
+    }
+
+    /**
+     * 上传头像
+     *
+     * @param avatar
+     * @return
+     */
+    @PostMapping("upload-avatar")
+    public ApiResult uploadAvatar(MultipartFile avatar) {
+        return null;
+    }
+
+    /**
+     * 修改用户信息
+     *
+     * @param userForm
+     * @return
+     */
+    @PostMapping("modify")
+    public ApiResult<UserVO> modifyUser(UserForm userForm) {
         return null;
     }
 
@@ -63,6 +96,92 @@ public class UserController {
     }
 
     public ApiResult hello() {
+        return null;
+    }
+
+    /**
+     * 获取图片
+     */
+    @GetMapping("get-image")
+    public void getImage() {
+
+    }
+
+    /**
+     * 用户列表2
+     *
+     * @param userId 用户ID
+     * @param user
+     * @return
+     */
+    @GetMapping("list2")
+    public ApiResult<ArrayList<UserVO>> list2(@RequestParam Long userId, @RequestBody UserForm user) {
+        return null;
+    }
+
+    /**
+     * 用户列表3
+     *
+     * @param pageForm
+     * @return
+     */
+    @GetMapping("list3")
+    public List<UserVO> list3(PageForm pageForm) {
+        return null;
+    }
+
+    /**
+     * List测试
+     *
+     * @param ids 用户id
+     * @return
+     */
+    @GetMapping("list-by-ids")
+    public ApiResult getUserList(List<Long> ids) {
+        return null;
+    }
+
+    /**
+     * 枚举参数测试
+     *
+     * @param userType
+     * @return
+     */
+    @GetMapping("getByUserType")
+    public ApiResult getByUserType(UserType userType) {
+        return null;
+    }
+
+    /**
+     * 忽略该接口
+     *
+     * @return
+     */
+    @Ignore
+    @PostMapping("ignore")
+    public ApiResult ignore() {
+        return null;
+    }
+
+    /**
+     * 字符串结果
+     *
+     * @return
+     */
+    @ApiDoc(stringResult = "{code: 0, data: 'success'}")
+    @GetMapping(value = "custom-json")
+    public ApiResult customJsonResult() {
+        return null;
+    }
+
+    /**
+     * 泛型参数
+     *
+     * @param user
+     * @return
+     */
+    @GetMapping(value = "generic-form")
+    public ApiResult testGenericForm(@RequestBody GenericForm<UserForm> user) {
         return null;
     }
 }

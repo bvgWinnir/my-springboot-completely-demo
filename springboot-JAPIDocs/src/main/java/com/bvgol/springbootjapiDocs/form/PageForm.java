@@ -1,11 +1,7 @@
 package com.bvgol.springbootjapiDocs.form;
 
 /**
- * @author guochen
- * @Title: PageForm
- * @Package
- * @Description:
- * @date 2020/6/2810:03
+ * @author yeguozhong yedaxia.github.com
  */
 public class PageForm {
     private Integer page; //页数

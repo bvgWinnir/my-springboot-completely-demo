@@ -1,4 +1,4 @@
-package com.bvgol.springbootjapiDocs.vo;
+package com.bvgol.springbootjapiDocs.result.user;
 
 /**
  * @author yeguozhong yedaxia.github.com

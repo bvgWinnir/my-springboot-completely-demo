@@ -3,11 +3,7 @@ package com.bvgol.springbootjapiDocs.form;
 import javax.validation.constraints.NotNull;
 
 /**
- * @author guochen
- * @Title: UserListForm
- * @Package
- * @Description:
- * @date 2020/6/289:59
+ * @author yeguozhong yedaxia.github.com
  */
 public class UserListForm extends PageForm {
     private Integer status; //用户状态
