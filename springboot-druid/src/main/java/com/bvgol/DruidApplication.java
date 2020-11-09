@@ -16,4 +16,8 @@ public class DruidApplication {
     }
 
 //    http://localhost:8080/druid/login.html
+    /**
+     * 通过 resttool 执行sql 后
+     * web console plant sql
+     */
 }
