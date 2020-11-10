@@ -19,5 +19,6 @@ public class DruidApplication {
     /**
      * 通过 resttool 执行sql 后
      * web console plant sql
+     * 但是重启服务会清空之前的
      */
 }
