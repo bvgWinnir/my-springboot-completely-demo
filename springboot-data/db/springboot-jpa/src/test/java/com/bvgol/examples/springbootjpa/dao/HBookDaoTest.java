@@ -22,7 +22,7 @@ public class HBookDaoTest {
         Sort sort = JpaSort.by("price");
         Pageable pageable = PageRequest.of(1, 3, sort);
         Page<Hbook> hbooks = hBookDao.findHbooksBy(pageable);
-        hbooks.getContent().forEach(System.out::println);
+        hbooks.getContent().forEach(System.out::println;
     }
 
     @Test
