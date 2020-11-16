@@ -35,12 +35,18 @@
         <module>springboot-mybatis-plus-diboot</module>
         <module>lambda</module>
         <module>springboot-easyExcel</module>
-        <module>springboot-druid</module>
+        <!--        <module>springboot-druid</module>-->
         <module>springboot-dataway</module>
         <module>springboot-activiti</module>
         <module>springboot-devtools</module>
         <module>springboot-Flowable</module>
         <module>maven-flowable</module>
+
+        <module>springboot-data</module>
+        <module>springboot-doc</module>
+        <module>springboot-dubbo</module>
+        <module>springboot-mq</module>
+        <module>springboot-workflow</module>
 
     </modules>
 

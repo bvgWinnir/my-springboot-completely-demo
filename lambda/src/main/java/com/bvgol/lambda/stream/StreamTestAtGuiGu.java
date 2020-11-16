@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
  * @author: GUOCHEN
  * @create: 2020/11/04 11:28
  */
-public class StreamExpTest {
+public class StreamTestAtGuiGu {
 
     List<Transactions> transactions = null;
     List<Trader> traders;
@@ -193,12 +193,11 @@ public class StreamExpTest {
 
     @Test
     public void test12() {
-        //分组
+        //根据城市分组
         Map<String, List<Trader>> collect = traders.stream().collect(Collectors.groupingBy(Trader::getCity));
         collect.forEach((k, v) -> {
             System.out.println(k + "---" + v.size());
         });
-        //classEntities.stream().collect(Collectors.groupingBy(ClassEntity::getGrade));
     }
 
     @Test
