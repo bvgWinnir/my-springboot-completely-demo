@@ -17,7 +17,7 @@
 
     <modules>
         <module>springboot-args-webflux</module>
-        <module>springboot-jpa</module>
+<!--        <module>springboot-jpa</module>-->
         <module>springboot-mybatis-plus</module>
         <module>springboot-mybatis-xml-annotion</module>
         <module>springboot-redis</module>
