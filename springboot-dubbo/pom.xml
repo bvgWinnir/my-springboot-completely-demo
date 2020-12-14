@@ -10,9 +10,9 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <artifactId>springboot-dubbo</artifactId>
-    <!--    <modules>-->
-    <!--        <module>springboot-dubbo-nacos</module>-->
-    <!--        <module>springboot-dubbo-zookeeper</module>-->
-    <!--    </modules>-->
+    <modules>
+        <module>springboot-dubbo-nacos</module>
+        <module>springboot-dubbo-zookeeper</module>
+    </modules>
 
 </project>

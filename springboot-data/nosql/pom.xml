@@ -13,6 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-mongdb</module>
+        <module>springboot-redis</module>
+        <module>springboot-elasticsearch</module>
     </modules>
 
 </project>

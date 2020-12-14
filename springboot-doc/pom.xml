@@ -10,10 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <artifactId>springboot-doc</artifactId>
-    <!--<modules>-->
-    <!--    <module>springboot-session</module>-->
-    <!--    <module>sptingboot-swagger</module>-->
-    <!--    <module>springboot-knife4j</module>-->
-    <!--    <module>springboot-JAPIDocs</module>-->
-    <!--</modules>-->
+    <modules>
+        <!--        <module>springboot-session</module>-->
+        <module>sptingboot-swagger</module>
+        <module>springboot-knife4j</module>
+        <module>springboot-JAPIDocs</module>
+    </modules>
 </project>

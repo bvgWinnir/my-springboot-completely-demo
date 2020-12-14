@@ -10,5 +10,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>RocketMQ</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>rocket-consumer</module>
+        <module>rocket-producer</module>
+    </modules>
 
+    <dependencies>
+        <!-- rocketmq -->
+        <dependency>
+            <groupId>org.apache.rocketmq</groupId>
+            <artifactId>rocketmq-client</artifactId>
+            <version>4.7.0</version>
+        </dependency>
+    </dependencies>
 </project>

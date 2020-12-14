@@ -7,10 +7,10 @@ services:
       - 5306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root                      #密码
-     # MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
-#    volumes:
-#      - "D:\docker\mysql\data:/var/lib/mysql"           # 挂载数据目录
-#      - "${MYSQL_DIR}/config:/etc/mysql/conf.d"      # 挂载配置文件目录
+      # MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+  #    volumes:
+  #      - "D:\docker\mysql\data:/var/lib/mysql"           # 挂载数据目录
+  #      - "${MYSQL_DIR}/config:/etc/mysql/conf.d"      # 挂载配置文件目录
   redis:
     # 指定镜像
     container_name: redis-docker-local
@@ -18,10 +18,10 @@ services:
     ports:
       # 端口映射
       - 9379:6379
-#    volumes:
-#      # 目录映射
-#      - "${REDIS_DIR}/conf:/usr/local/etc/redis"
-#      - "${REDIS_DIR}/data:/data"
+    #    volumes:
+    #      # 目录映射
+    #      - "${REDIS_DIR}/conf:/usr/local/etc/redis"
+    #      - "${REDIS_DIR}/data:/data"
     command:
       # 执行的命令
       redis-server
@@ -32,7 +32,7 @@ services:
     environment:
       - MODE=standalone
     volumes:
-      - D:\docker\nacos-compose\logs:/home/nacos/logs
+      - /home/nacos/logs:/home/nacos/logs
     ports:
       - 8848:8848
 
