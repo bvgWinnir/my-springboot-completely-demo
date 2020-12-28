@@ -1,4 +1,4 @@
-package com.bvgol.thread;
+package com.bvgol.thread.completableFutureTest;
 
 import java.util.concurrent.*;
 import java.util.stream.IntStream;
@@ -14,8 +14,9 @@ public class CompletableFutureTest {
 
 //        test1();
 //        test2();
-        test3();
+//        test3();
 //        test4();
+        test9();
     }
 
     //采用了callable+ future方式  ,get方法获取任务的返回值会被阻塞住
@@ -131,7 +132,7 @@ public class CompletableFutureTest {
         CompletableFuture<Integer> evenNumber = CompletableFuture.supplyAsync(() -> {
             try {
                 System.out.println("开始计算偶数和  ...");
-                Thread.sleep(5_000);
+                Thread.sleep(2_000);
                 System.out.println("结束计算偶数和  ...");
             } catch (InterruptedException e) {
                 e.printStackTrace();

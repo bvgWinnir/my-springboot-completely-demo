@@ -51,7 +51,7 @@ public class QueryUserService {
 //                System.out.println("全部完成查询" );
 //            }
 //        });
-        getUserInfo.thenAccept(System.out::println);
+        getUserInfo.thenAccept(aVoid -> System.out.println(aVoid));
         getUserInfo.join();  //--4
         return userInfo;
     }
