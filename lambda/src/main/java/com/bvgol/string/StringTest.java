@@ -10,10 +10,15 @@ public class StringTest {
         String s = "箱号:[箱号]# 图号:[图号]";
         String[] split = s.split(" ");
         for (int i = 0; i < split.length; i++) {
-            String str = split[i];
-            String suffix = str.substring(0, split[i].indexOf("["));
-            String prefix = split[i].substring( split[i].indexOf("]"), split[i].length());
-            System.out.println("suffix = " + suffix+"  "+"prefix = " + prefix);
+
+            System.out.println(split[i]);
+        }
+
+        String s1 = "asdadasdadasdasd";
+        String[] split1 = s1.split(",");
+        for (int i = 0; i < split1.length; i++) {
+
+            System.out.println(split1[i]);
         }
 
     }
