@@ -1,7 +1,10 @@
 package com.bvgol.examples.springbootmybatisplus.model;
 
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Date;
@@ -15,6 +18,9 @@ import java.util.Date;
 @Slf4j
 @Data
 @TableName(value = "sys_user")
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class User {
     @TableId(value = "user_id", type = IdType.ASSIGN_ID)
     private Long userId;
