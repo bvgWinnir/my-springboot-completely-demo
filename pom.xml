@@ -34,6 +34,8 @@
         <module>springboot-my-annotation</module>
         <module>springboot-jwt</module>
         <module>springboot-tools</module>
+        <module>springboot-websocket</module>
+        <module>springboot-themleaf</module>
 
     </modules>
 
