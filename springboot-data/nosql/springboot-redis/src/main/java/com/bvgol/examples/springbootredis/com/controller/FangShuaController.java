@@ -29,7 +29,7 @@ package com.bvgol.examples.springbootredis.com.controller;/**
  */
 
 import com.bvgol.examples.springbootredis.com.annotation.AccessLimit;
-import com.example.demo.result.Result;
+import com.bvgol.examples.springbootredis.com.entity.Result;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
