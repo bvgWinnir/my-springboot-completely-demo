@@ -23,6 +23,7 @@ public class TestController {
     @GetMapping("get")
     public Object get(Model model) {
         model.addAttribute("msg", "据说明天有大雪");
+        //ViewConstants.USER_MY_CONTACTS
         return "hello1";
     }
 

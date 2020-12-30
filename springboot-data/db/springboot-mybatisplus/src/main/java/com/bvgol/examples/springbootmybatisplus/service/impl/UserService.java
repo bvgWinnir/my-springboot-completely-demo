@@ -1,4 +1,4 @@
-package com.bvgol.examples.springbootmybatisplus.service;
+package com.bvgol.examples.springbootmybatisplus.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.bvgol.examples.springbootmybatisplus.model.User;

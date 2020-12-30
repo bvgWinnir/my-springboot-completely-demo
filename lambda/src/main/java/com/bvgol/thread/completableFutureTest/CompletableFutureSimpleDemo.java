@@ -7,7 +7,6 @@ package com.bvgol.thread.completableFutureTest;/**
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Supplier;
 
 /**
  * @program: my-springboot-completely
@@ -15,7 +14,7 @@ import java.util.function.Supplier;
  * @author: GUOCHEN
  * @create: 2020/12/28 11:15
  */
-public class CompletableFutureSimpleDemo implements Supplier<String> {
+public class CompletableFutureSimpleDemo {
     //IntStream.range(1,9).boxed().findFirst().toString();
 
     /**
@@ -182,6 +181,7 @@ public class CompletableFutureSimpleDemo implements Supplier<String> {
         CompletableFuture step3 = CompletableFuture.supplyAsync(() -> {
             try {
                 step1.length();
+//                int i =1/0;
                 return CompletableFutureSimpleDemo.step3();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -214,18 +214,10 @@ public class CompletableFutureSimpleDemo implements Supplier<String> {
 //        Test1.line();//5003 搜有代码块时间合计
 //        Test1.completable_supplyAsync();//1074 全部并行
         CompletableFutureSimpleDemo.actual();//2055
+        //有异常时  异常步骤报异常 非异常代码段还是可以执行
         System.out.println("=============");
         long end = System.currentTimeMillis();
         System.out.println(end - begin);
     }
 
-    /**
-     * Gets a result.
-     *
-     * @return a result
-     */
-    @Override
-    public String get() {
-        return null;
-    }
 }

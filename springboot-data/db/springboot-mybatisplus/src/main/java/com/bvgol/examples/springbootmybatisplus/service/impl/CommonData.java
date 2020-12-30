@@ -1,4 +1,4 @@
-package com.bvgol.examples.springbootmybatisplus;
+package com.bvgol.examples.springbootmybatisplus.service.impl;
 
 import lombok.Data;
 

@@ -12,7 +12,8 @@
     <artifactId>springboot-jwt</artifactId>
 
     <modules>
+
+        <module>sprintboot-oauth2</module>
         <module>springboot-session</module>
-        <module>springboot-sercurity</module>
     </modules>
 </project>

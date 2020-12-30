@@ -2,6 +2,7 @@ package com.bvgol.examples.springbootmybatisplus;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.bvgol.examples.springbootmybatisplus.service.impl.CommonData;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;

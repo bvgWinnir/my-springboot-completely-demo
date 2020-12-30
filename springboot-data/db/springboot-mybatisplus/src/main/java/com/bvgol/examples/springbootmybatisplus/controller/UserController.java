@@ -1,6 +1,6 @@
 package com.bvgol.examples.springbootmybatisplus.controller;
 
-import com.bvgol.examples.springbootmybatisplus.service.UserService;
+import com.bvgol.examples.springbootmybatisplus.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

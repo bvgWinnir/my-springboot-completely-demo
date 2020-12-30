@@ -1,4 +1,4 @@
-package com.bvgol.examples.springbootmybatisplus.service;
+package com.bvgol.examples.springbootmybatisplus.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bvgol.examples.springbootmybatisplus.mapper.UserMapper;
@@ -12,10 +12,9 @@ import org.springframework.stereotype.Service;
  * @Date 2020/5/6 9:11
  * @Created by guochen
  */
- @Slf4j
- 
-  
+@Slf4j
+
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService{
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
 }
