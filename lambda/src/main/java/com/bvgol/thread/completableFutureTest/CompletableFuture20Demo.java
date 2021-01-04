@@ -118,11 +118,14 @@ public class CompletableFuture20Demo {
         assertTrue("Result was empty", result.length() > 0);
     }
 
+    static ExecutorService executorService = Executors.newSingleThreadExecutor();
+
     //    8.异常完成计算
-//    现在，让我们看看如何异常地显式完成异步操作，从而指示计算失败。为简单起见，该操作采用一个字符串并将其转换为大写，并且我们模拟了1秒的操作延迟。为此，我们将使用该thenApplyAsync(Function, Executor)方法，其中第一个参数是大写函数，而执行程序是延迟的执行程序，在实际将操作提交给common之前，它会等待1秒钟ForkJoinPool。
-    static void completeExceptionallyExample() {
-        CompletableFuture<String> cf = CompletableFuture.completedFuture("message");
-//                .thenApplyAsync(String::toUpperCase, CompletableFuture.delayedExecutor(1, TimeUnit.SECONDS));
+//    现在，让我们看看如何异常地显式完成异步操作，从而指示计算失败。为简单起见，该操作采用一个字符串并将其转换为大写，并且我们模拟了1秒的操作延迟。
+//    为此，我们将使用该thenApplyAsync(Function, Executor)方法，其中第一个参数是大写函数，而执行程序是延迟的执行程序，在实际将操作提交给common之前，它会等待1秒钟ForkJoinPool。
+    static void completeExceptionallyExample() throws InterruptedException {
+        CompletableFuture<String> cf = CompletableFuture.completedFuture("message")
+                .thenApplyAsync(String::toUpperCase, executorService);
         CompletableFuture<String> exceptionHandler = cf.handle((s, th) -> {
             return (th != null) ? "message upon cancel" : "";
         });
