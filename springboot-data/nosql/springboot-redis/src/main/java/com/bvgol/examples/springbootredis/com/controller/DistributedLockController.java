@@ -3,6 +3,7 @@ package com.bvgol.examples.springbootredis.com.controller;
 import com.bvgol.examples.springbootredis.com.entity.Book;
 import com.bvgol.examples.springbootredis.com.lockAspect.RedisLockAnnotation;
 import com.bvgol.examples.springbootredis.com.lockAspect.RedisLockTypeEnum;
+import com.bvgol.examples.springbootredis.com.service.logic.LogicService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -25,6 +26,7 @@ import java.math.BigDecimal;
 public class DistributedLockController {
 
     private RedisTemplate redisTemplate;
+    private LogicService logicService;
 //    private StringRedisTemplate stringRedisTemplate;
 
     @GetMapping("/testRedis")
@@ -62,6 +64,47 @@ public class DistributedLockController {
             log.info("has some error", e);
         }
         return Book.builder().name("请求结束").build();
+    }
+
+    /**
+     * 功能描述: 分布式锁`数据锁 非注解版
+     *
+     * @param token
+     * @return: com.bvgol.examples.springbootredis.com.entity.Book
+     * @author: 郭辰
+     * @date: 2021/1/4 13:57
+     */
+    @GetMapping("/testDistributedLockByRedis")
+    public Book testDistributedLockByRedis(@RequestParam("token") Integer token) {
+        Book book = null;
+        try {
+            book = logicService.logic(token);
+        } catch (Exception e) {
+            // log error
+            log.info("has some error", e);
+        }
+        return book;
+    }
+
+    /**
+     * 功能描述: 分布式锁`数据锁 注解版
+     *
+     * @param userId
+     * @return: com.bvgol.examples.springbootredis.com.entity.Book
+     * @author: 郭辰
+     * @date: 2021/1/4 13:57
+     */
+    @GetMapping("/testDistributedLockByRedisAnn")
+    public Book testDistributedLockByRedisAnn(@RequestParam("userId") Integer userId) {
+        try {
+            log.info("睡眠执行前");
+            Thread.sleep(10000);
+            log.info("睡眠执行后");
+        } catch (Exception e) {
+            // log error
+            log.info("has some error", e);
+        }
+        return Book.builder().name("请求结束").id(userId).build();
     }
 
 }
