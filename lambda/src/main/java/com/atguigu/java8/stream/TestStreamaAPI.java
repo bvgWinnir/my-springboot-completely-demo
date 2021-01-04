@@ -1,5 +1,6 @@
-package com.bvgol.lambda.com.atguigu.java8;
+package com.atguigu.java8.stream;
 
+import com.atguigu.java8.lamdba.Employee;
 import org.junit.Test;
 
 import java.util.ArrayList;

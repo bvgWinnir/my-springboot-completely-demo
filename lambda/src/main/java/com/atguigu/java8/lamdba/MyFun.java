@@ -1,4 +1,4 @@
-package com.bvgol.lambda.com.atguigu.java8;
+package com.atguigu.java8.lamdba;
 
 @FunctionalInterface
 public interface MyFun {

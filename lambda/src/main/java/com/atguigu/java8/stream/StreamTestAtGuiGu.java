@@ -1,10 +1,13 @@
-package com.bvgol.lambda.stream;/**
+package com.atguigu.java8.stream;/**
  * @Classname StreamExp
  * @Description TODO
  * @Date 2020/11/4 11:28
  * @Created by GUOCHEN
  */
 
+import com.bvgol.lambda.stream.Apple;
+import com.bvgol.lambda.stream.Trader;
+import com.bvgol.lambda.stream.Transactions;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.bvgol.lambda.com.atguigu.exer;
+package com.atguigu.exer;
 
 public interface MyFunction2<T, R> {
 

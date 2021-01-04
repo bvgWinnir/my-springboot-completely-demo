@@ -1,6 +1,6 @@
-package com.bvgol.lambda.com.atguigu.exer;
+package com.atguigu.exer;
 
-import com.bvgol.lambda.com.atguigu.java8.Employee;
+import com.atguigu.java8.lamdba.Employee;
 import org.junit.Test;
 
 import java.util.Arrays;
