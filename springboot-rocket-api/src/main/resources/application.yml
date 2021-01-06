@@ -1,0 +1,28 @@
+server:
+  port: 10086
+#spring.rocket-api.base-register-path: /interface-ui
+#spring.rocket-api.secret-key: 123456789
+#spring.rocket-api.config-enabled: true
+#spring.rocket-api.map-underscore-to-camel-case: true
+##开启条件
+#  1.创建表api_config 详见数据库创建脚本，用于持久化配置信息
+#  2.添加以下spring cloud 依赖，用于实现springboot配置的动态更新
+#  注意：因为配置存于数据库中，根据springboot配置顺序加载规则，所以这些配置是最晚加载的，优先级则是最高
+#  如果需要使用 @Value(),@ConfigurationProperties 方式获取这些配置，需要开启@RefreshScope 或者bean初始于`QLRequestMappingFactory` 之后
+#  <dependency>
+#  <groupId>org.springframework.cloud</groupId>
+#  <artifactId>spring-cloud-context</artifactId>
+#  </dependency>
+spring:
+  application:
+    name: rocket-api
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.94.43.15:3306/rocketApi?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: mima8ge8
+  rocket-api:
+    base-register-path: /interface-ui
+    secret-key: 123456789
+    config-enabled: true
+    map-underscore-to-camel-case: true
