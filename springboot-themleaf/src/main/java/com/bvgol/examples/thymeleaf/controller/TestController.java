@@ -1,4 +1,4 @@
-package com.bvgol.example.thymeleaf.controller;
+package com.bvgol.examples.thymeleaf.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

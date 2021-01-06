@@ -5,6 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
+/**
+ * @author GUOCHEN
+ */
 @RestController
 public class HelloController {
     @GetMapping("/hello")
