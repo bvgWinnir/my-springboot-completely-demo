@@ -14,8 +14,6 @@
     <modules>
 
         <module>sprintboot-oauth2</module>
-        <module>springboot-session</module>
         <module>springboot-session2</module>
-        <module>springboot-sercurity2</module>
     </modules>
 </project>
