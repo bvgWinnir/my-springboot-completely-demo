@@ -37,6 +37,7 @@
         <module>springboot-websocket</module>
         <module>springboot-themleaf</module>
         <module>springboot-rocket-api</module>
+        <module>springboot-mockito</module>
 
     </modules>
     <dependencies>
