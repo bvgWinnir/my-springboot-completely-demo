@@ -5,9 +5,9 @@ package com.atguigu.java8.stream;/**
  * @Created by GUOCHEN
  */
 
-import com.bvgol.lambda.stream.Apple;
-import com.bvgol.lambda.stream.Trader;
-import com.bvgol.lambda.stream.Transactions;
+import com.bvgol.examples.my.stream.Apple;
+import com.bvgol.examples.my.stream.Trader;
+import com.bvgol.examples.my.stream.Transactions;
 import org.junit.Before;
 import org.junit.Test;
 

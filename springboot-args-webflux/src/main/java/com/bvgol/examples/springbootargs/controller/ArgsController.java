@@ -1,10 +1,12 @@
 package com.bvgol.examples.springbootargs.controller;
 
 import com.bvgol.examples.springbootargs.vo.DemoVo;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @Classname ArgsController
@@ -23,8 +25,10 @@ public class ArgsController {
      * from 1:@RequestParam  2:obj
      * json @RequestBody+obj
      */
+    @SneakyThrows
     @GetMapping("/get")
     public Object get(@RequestParam() String str) {
+        TimeUnit.SECONDS.sleep(2);
         return str;
     }
 
