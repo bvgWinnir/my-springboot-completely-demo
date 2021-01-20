@@ -1,14 +1,15 @@
-package com.bvgol.examples.my.nulltest;/**
+package com.bvgol.examples.my.optionalTest;/**
  * @Classname OptionalTest
  * @Description TODO
  * @Date 2020/12/17 10:01
  * @Created by GUOCHEN
  */
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.NoSuchElementException;
-import java.util.Optional;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.*;
+
+import java.util.*;
 
 /**
  * @program: my-springboot-completely
@@ -17,6 +18,7 @@ import java.util.Optional;
  * @create: 2020/12/17 10:01
  */
 public class OptionalTest {
+    @SneakyThrows
     public static void main(String[] args) {
         OptionalTest o = new OptionalTest();
 //        o.of();
@@ -29,7 +31,10 @@ public class OptionalTest {
 //        o.orElseThrow();
 //        o.optionalMap();
 //        o.flatMap();
-        o.filter();
+//        o.filter();
+
+        //这样写可以代替 if throw exception?
+        XxxOrder xxxOrderOptional = Optional.ofNullable(XxxOrder.builder().build()).orElseThrow(Exception::new);
 
     }
 
@@ -127,4 +132,83 @@ public class OptionalTest {
         }
     }
 
+
+/*    if(xxxOrder != null){
+        if(xxxOrder.getXxxShippingInfo() != null){
+            if(xxxOrder.getXxxShippingInfo().getXxxShipmentDetails() != null){
+                if(xxxOrder.getXxxShippingInfo().getXxxShipmentDetails().getXxxTrackingInfo() != null){
+    ...
+                }
+            }
+        }
+    }*/
+
+    public String[] getFulfillments(XxxOrder xxxOrder) {
+        return Optional.ofNullable(xxxOrder)
+                .map((o) -> o.getXxxShippingInfo())
+                .map((si) -> si.getXxxShipmentDetails())
+                .map((sd) -> sd.getXxxTrackingInfo())
+                .map((t) -> new String[]{t.getTrackingNumber(), t.getTrackingLink()})
+                .orElse(null);
+    }
+
+    public XxxOrder opCheck() {
+        XxxOrder xxxOrder = new XxxOrder();
+        xxxOrder.setAge(12);
+        xxxOrder.setBirthday(new Date());
+        return Optional.ofNullable(xxxOrder).map(XxxOrder::getAge).map(integer -> {
+            if (integer > 0) {
+                xxxOrder.setAge(111);
+                return xxxOrder;
+            }
+            return null;
+        }).orElse(xxxOrder);
+    }
+
+}
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+class XxxOrder {
+
+    /**
+     * 物流信息
+     */
+    @JsonProperty("shippingInfo")
+    private XxxShippingInfo xxxShippingInfo;
+
+    private Integer age;
+
+    private String name;
+
+    private Date birthday;
+
+}
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+class XxxShippingInfo {
+    private XxxShipmentDetails XxxShipmentDetails;
+}
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+class XxxShipmentDetails {
+    private XxxTrackingInfo xxxTrackingInfo;
+}
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+class XxxTrackingInfo {
+    private String TrackingNumber;
+    private String TrackingLink;
 }
