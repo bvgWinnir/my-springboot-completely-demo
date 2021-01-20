@@ -11,7 +11,11 @@
 
     <artifactId>springboot-druid</artifactId>
     <dependencies>
-
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.alibaba/druid-spring-boot-starter -->
         <!--        <dependency>-->
         <!--            <groupId>com.alibaba</groupId>-->
