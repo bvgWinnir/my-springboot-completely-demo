@@ -1,11 +1,8 @@
 package com.bvgol.examples.springbootmybatisplus;
 
-
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.bvgol.examples.springbootmybatisplus.model.TestBit;
 import com.bvgol.examples.springbootmybatisplus.model.User;
-import com.bvgol.examples.springbootmybatisplus.service.impl.TestBitService;
 import com.bvgol.examples.springbootmybatisplus.service.impl.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -29,9 +26,8 @@ import java.util.List;
 @SpringBootTest
 public class SampleServcieTest {
 
-    @Autowired
-    private TestBitService testBitService;
-
+//    @Autowired
+//    private TestBitService testBitService;
 
     @Autowired
     private UserService userService;
@@ -40,7 +36,7 @@ public class SampleServcieTest {
     public void testSelect() {
         System.out.println(("----- selectAll method test ------"));
         List<User> userList = userService.list(null);
-        Assert.assertEquals(5, userList.size());
+//        Assert.assertEquals(5, userList.size());
         userList.forEach(System.out::println);
     }
     @Test
@@ -60,15 +56,14 @@ public class SampleServcieTest {
         lambdaUsers.forEach(System.out::println);
     }
 
-
-    @Test
-    public void testbit(){
-        List<TestBit> list = testBitService.list();
-        list.forEach(System.out::println);
-
-        //bit 0==false   1==true
-        //TestBit(id=1, sex=false, name=111, brithday=null)
-        //TestBit(id=2, sex=true, name=222, brithday=Tue Sep 01 11:37:30 CST 2020)
-    }
+//    @Test
+//    public void testbit(){
+//        List<TestBit> list = testBitService.list();
+//        list.forEach(System.out::println);
+//
+//        //bit 0==false   1==true
+//        //TestBit(id=1, sex=false, name=111, brithday=null)
+//        //TestBit(id=2, sex=true, name=222, brithday=Tue Sep 01 11:37:30 CST 2020)
+//    }
 
 }
