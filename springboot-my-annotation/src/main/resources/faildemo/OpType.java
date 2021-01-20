@@ -12,5 +12,5 @@ package com.bvgol.examples.myAnnotation;/**
  * @create: 2020/11/17 14:35
  */
 public class OpType {
-    public static final OpType QUERY = new OpType();
+
 }

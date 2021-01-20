@@ -23,7 +23,7 @@ public @interface OpLog {
      * @return
      */
 
-//    public OpType opType();
+    public OpType opType();
 
     /**
      * 业务对象名称，如订单、库存、价格
