@@ -19,12 +19,12 @@ import java.util.Map;
  * @create: 2020/12/28 17:03
  */
 @Controller("web_Scoket_system")
-@RequestMapping("/api/socket")
+@RequestMapping("/api/websocket")
 public class SystemController {
     //页面请求
     @GetMapping("/index/{userId}")
     public ModelAndView socket(@PathVariable String userId) {
-        ModelAndView mav = new ModelAndView("/socket1");
+        ModelAndView mav = new ModelAndView("/test");
         mav.addObject("userId", userId);
         return mav;
     }
